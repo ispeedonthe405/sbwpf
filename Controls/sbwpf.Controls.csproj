@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (&#xA;    copy &quot;$(TargetDir)\*.dll&quot; &quot;E:\code\libs\&quot;&#xA;)&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (&#xA;    echo &quot;DEBUG: Not copying lib&quot;&#xA;)" />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\sbwpf.Core.csproj" />
+  </ItemGroup>
+
+</Project>
