@@ -1,0 +1,436 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (&#xA;    copy &quot;$(TargetDir)\*.dll&quot; &quot;E:\code\libs\&quot;&#xA;)&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (&#xA;    echo &quot;DEBUG: Not copying lib&quot;&#xA;)" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="Symbols\add.png" />
+    <None Remove="Symbols\add_attachment.png" />
+    <None Remove="Symbols\add_image.png" />
+    <None Remove="Symbols\alarm.png" />
+    <None Remove="Symbols\arrow_back.png" />
+    <None Remove="Symbols\arrow_drop_down.png" />
+    <None Remove="Symbols\arrow_forward.png" />
+    <None Remove="Symbols\arrow_right.png" />
+    <None Remove="Symbols\attach_email.png" />
+    <None Remove="Symbols\attach_file.png" />
+    <None Remove="Symbols\book.png" />
+    <None Remove="Symbols\bookmark.png" />
+    <None Remove="Symbols\bookmarks.png" />
+    <None Remove="Symbols\bookmark_add.png" />
+    <None Remove="Symbols\cancel.png" />
+    <None Remove="Symbols\check.png" />
+    <None Remove="Symbols\check_circle.png" />
+    <None Remove="Symbols\chevron_left.png" />
+    <None Remove="Symbols\chevron_right.png" />
+    <None Remove="Symbols\close.png" />
+    <None Remove="Symbols\contact.png" />
+    <None Remove="Symbols\content_copy.png" />
+    <None Remove="Symbols\content_cut.png" />
+    <None Remove="Symbols\content_paste.png" />
+    <None Remove="Symbols\delete.png" />
+    <None Remove="Symbols\double_arrow_down.png" />
+    <None Remove="Symbols\double_arrow_left.png" />
+    <None Remove="Symbols\double_arrow_right.png" />
+    <None Remove="Symbols\double_arrow_up.png" />
+    <None Remove="Symbols\draft.png" />
+    <None Remove="Symbols\drafts.png" />
+    <None Remove="Symbols\edit.png" />
+    <None Remove="Symbols\edit2.png" />
+    <None Remove="Symbols\email.png" />
+    <None Remove="Symbols\encrypted.png" />
+    <None Remove="Symbols\encrypted_add.png" />
+    <None Remove="Symbols\expand_circle.png" />
+    <None Remove="Symbols\explore.png" />
+    <None Remove="Symbols\favorite.png" />
+    <None Remove="Symbols\file_open.png" />
+    <None Remove="Symbols\find.png" />
+    <None Remove="Symbols\folder.png" />
+    <None Remove="Symbols\format_align_center.png" />
+    <None Remove="Symbols\format_align_left.png" />
+    <None Remove="Symbols\format_align_right.png" />
+    <None Remove="Symbols\format_bold.png" />
+    <None Remove="Symbols\format_italic.png" />
+    <None Remove="Symbols\format_size.png" />
+    <None Remove="Symbols\format_underlined.png" />
+    <None Remove="Symbols\group.png" />
+    <None Remove="Symbols\help.png" />
+    <None Remove="Symbols\home.png" />
+    <None Remove="Symbols\image.png" />
+    <None Remove="Symbols\inbox.png" />
+    <None Remove="Symbols\key.png" />
+    <None Remove="Symbols\key_off.png" />
+    <None Remove="Symbols\key_vertical.png" />
+    <None Remove="Symbols\language.png" />
+    <None Remove="Symbols\library_add.png" />
+    <None Remove="Symbols\link.png" />
+    <None Remove="Symbols\lock.png" />
+    <None Remove="Symbols\lock_open.png" />
+    <None Remove="Symbols\login.png" />
+    <None Remove="Symbols\mail.png" />
+    <None Remove="Symbols\mark_as_unread2.png" />
+    <None Remove="Symbols\mark_email_unread.png" />
+    <None Remove="Symbols\menu.png" />
+    <None Remove="Symbols\menu_book.png" />
+    <None Remove="Symbols\mic.png" />
+    <None Remove="Symbols\mic_off.png" />
+    <None Remove="Symbols\minimize.png" />
+    <None Remove="Symbols\more_horiz.png" />
+    <None Remove="Symbols\more_vert.png" />
+    <None Remove="Symbols\music_note.png" />
+    <None Remove="Symbols\music_off.png" />
+    <None Remove="Symbols\outbox.png" />
+    <None Remove="Symbols\passkey.png" />
+    <None Remove="Symbols\password.png" />
+    <None Remove="Symbols\password_2.png" />
+    <None Remove="Symbols\person.png" />
+    <None Remove="Symbols\person_add.png" />
+    <None Remove="Symbols\question_mark.png" />
+    <None Remove="Symbols\redo.png" />
+    <None Remove="Symbols\refresh.png" />
+    <None Remove="Symbols\remove.png" />
+    <None Remove="Symbols\search.png" />
+    <None Remove="Symbols\searchbox.png" />
+    <None Remove="Symbols\send.png" />
+    <None Remove="Symbols\settings.png" />
+    <None Remove="Symbols\share.png" />
+    <None Remove="Symbols\sort.png" />
+    <None Remove="Symbols\star.png" />
+    <None Remove="Symbols\sync.png" />
+    <None Remove="Symbols\timelapse.png" />
+    <None Remove="Symbols\timer.png" />
+    <None Remove="Symbols\timer_off.png" />
+    <None Remove="Symbols\timer_run.png" />
+    <None Remove="Symbols\timer_snooze.png" />
+    <None Remove="Symbols\toggle_off.png" />
+    <None Remove="Symbols\toggle_on.png" />
+    <None Remove="Symbols\trash.png" />
+    <None Remove="Symbols\undo.png" />
+    <None Remove="Symbols\zoom_in.png" />
+    <None Remove="Symbols\zoom_out.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Symbols\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\add_attachment.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\add_image.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\alarm.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\arrow_back.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\arrow_drop_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\arrow_forward.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\arrow_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\attach_email.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\attach_file.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\book.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\bookmark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\bookmarks.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\bookmark_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\cancel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\check.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\check_circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\chevron_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\chevron_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\close.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\contact.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\content_copy.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\content_cut.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\content_paste.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\delete.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\double_arrow_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\double_arrow_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\double_arrow_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\double_arrow_up.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\draft.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\drafts.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\edit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\edit2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\email.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\encrypted.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\encrypted_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\expand_circle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\explore.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\favorite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\file_open.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\find.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\folder.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_align_center.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_align_left.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_align_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_bold.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_italic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_size.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\format_underlined.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\group.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\help.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\image.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\inbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\key.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\key_off.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\key_vertical.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\language.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\library_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\link.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\lock.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\lock_open.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\login.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\mail.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\mark_as_unread2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\mark_email_unread.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\menu.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\menu_book.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\mic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\mic_off.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\minimize.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\more_horiz.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\more_vert.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\music_note.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\music_off.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\outbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\passkey.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\password.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\password_2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\person.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\person_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\question_mark.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\redo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\refresh.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\remove.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\searchbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\send.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\share.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\sort.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\star.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\sync.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\timelapse.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\timer.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\timer_off.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\timer_run.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\timer_snooze.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\toggle_off.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\toggle_on.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\trash.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\undo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\zoom_in.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Symbols\zoom_out.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
