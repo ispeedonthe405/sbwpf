@@ -1,6 +1,6 @@
 # SBWPF
 
-## A WPF application kit consisting of things I have found useful over time. The three assemblies are as follows:
+## A WPF application kit consisting of things I have found useful over time. The four assemblies are as follows:
 
 ### Core:
 - Logger: A lightweight event log system, supporting multiple categories (Debug, Info, Notify, Warning, Error, Exception). Easily binds to UX.
@@ -13,4 +13,6 @@ Gives color-scheme support to both the stock UI and custom controls. Integration
 ### Controls:
 - DataGridEx: A small enhancement of the stock WPF DataGrid. It provides automatic saving and restoration of the DataGrid columns: reordering, resizing, and sorting are all captured automatically. All you have to do is implement the IControlSerializer interface and pass in an instance of that class to the DataGridEx instance. Your IControlSerializer implementation will define the details of how "Save" and "Load" work in your application.
 
+### Test:
+In addition to serving as my development test-case, it also serves as an example of how to implement and use the various libs that make up the sbwpf package.
 
