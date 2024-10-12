@@ -4,7 +4,7 @@
 
 ### Core:
 - Logger: A lightweight event log system, supporting multiple categories (Debug, Info, Notify, Warning, Error, Exception). Easily binds to UX.
-- Extensions: Extension methods for List<T>, ObservableCollection<T>, and String. Adds features like AddRange and AddUnique.
+- Extensions: Extension methods you might find useful, including some used in this package.
 - IoUtil: A collection of sanity-saving functions that helps to make the user code thinner and less repetetitive.
 
 ### Themer:
