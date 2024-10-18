@@ -3,14 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Test"
+        xmlns:local="clr-namespace:sbwpf.Test"
         mc:Ignorable="d"
         Width="800" Height="450"
         Title="sbwpf: Test and Demo Application"
         WindowStartupLocation="CenterScreen">
 
     <TabControl x:Name="MainTabs">
-        <TabItem Header="Themer"></TabItem>
+        <TabItem Header="Themer">
+            <local:uc_Themer/>
+        </TabItem>
         <TabItem Header="Logger"></TabItem>
         <TabItem Header="DataGridEx"></TabItem>
     </TabControl>

@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Controls\sbwpf.Controls.csproj" />
+    <ProjectReference Include="..\Core\sbwpf.Core.csproj" />
+    <ProjectReference Include="..\Themer\sbwpf.Themer.csproj" />
+  </ItemGroup>
+
 </Project>

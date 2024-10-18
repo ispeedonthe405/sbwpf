@@ -4,9 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:sbwpf.Test"
+             xmlns:themer="clr-namespace:sbwpf.Themer;assembly=sbwpf.Themer"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid>
-            
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="Auto">
+            <Label VerticalAlignment="Center" Content="Active theme:"/>
+            <Separator Width="20" Background="Transparent"/>
+            <ComboBox x:Name="cb_Themes" Width="200" SelectionChanged="cb_Themes_SelectionChanged"/>
+        </ToolBar>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <themer:ThemeSymbol SymbolName="add"/>
+            <themer:ThemeSymbol SymbolName="key"/>
+            <themer:ThemeSymbol SymbolName="cancel"/>
+            <themer:ThemeSymbol SymbolName="refresh"/>
+            <themer:ThemeSymbol SymbolName="delete"/>
+        </StackPanel>
+        
     </Grid>
+    
 </UserControl>
