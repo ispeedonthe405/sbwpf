@@ -72,6 +72,11 @@ namespace sbwpf.Core
             NewEvent(LogEvent.EventCategory.Warning, message);
         }
 
+        public static void Warning(Exception ex)
+        {
+            NewEvent(LogEvent.EventCategory.Warning, ex.Message);
+        }
+
         public static void Error(string message)
         {
             NewEvent(LogEvent.EventCategory.Error, message);
@@ -97,6 +102,14 @@ namespace sbwpf.Core
 #if DEBUG
             NewEvent(LogEvent.EventCategory.Debug, message);
             System.Diagnostics.Debug.Write($"Logger:\n{message}\n");
+#endif
+        }
+
+        public static void Debug(Exception ex)
+        {
+#if DEBUG
+            NewEvent(LogEvent.EventCategory.Debug, ex.Message);
+            System.Diagnostics.Debug.Write($"Logger:\n{ex.Message}\n");
 #endif
         }
 
