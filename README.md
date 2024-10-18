@@ -10,6 +10,8 @@
 ### Themer:
 Gives color-scheme support to both the stock UI and custom controls. Integration and API are simple. In addition to the default themes, it allows the programmer to create custom themes easily.
 
+Themer also features a new Image type, called ThemeSymbol. Symbols are images used as control symbols with automatic color selection. Each theme specifies a symbol color. When the active theme is changed, the control symbols automatically recolor themselves to match. This means only one copy of the image library exists; the loaded, active list is recolored upon theme change.
+
 ### Controls:
 - DataGridEx: A small enhancement of the stock WPF DataGrid. It provides automatic saving and restoration of the DataGrid columns: reordering, resizing, and sorting are all captured automatically. All you have to do is implement the IControlSerializer interface and pass in an instance of that class to the DataGridEx instance. Your IControlSerializer implementation will define the details of how "Save" and "Load" work in your application.
 
