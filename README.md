@@ -16,5 +16,5 @@ Themer also features a new Image type, called ThemeSymbol. Symbols are images us
 - DataGridEx: A small enhancement of the stock WPF DataGrid. It provides automatic saving and restoration of the DataGrid columns: reordering, resizing, and sorting are all captured automatically. All you have to do is implement the IControlSerializer interface and pass in an instance of that class to the DataGridEx instance. Your IControlSerializer implementation will define the details of how "Save" and "Load" work in your application.
 
 ### Test:
-In addition to serving as my development test-case, it also serves as an example of how to implement and use the various libs that make up the sbwpf package.
+In addition to serving as my development test-case, it also serves as an example of how to integrate and use the various libs that make up the sbwpf package.
 
