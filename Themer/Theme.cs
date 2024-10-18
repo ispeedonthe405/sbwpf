@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 
 namespace sbwpf.Themer
 {
@@ -8,19 +9,10 @@ namespace sbwpf.Themer
         #region Fields
         /////////////////////////////
 
-        public enum eSymbolColor
-        {
-            c111111,
-            c242424,
-            c434343,
-            cC0C0C0,
-            cEFEFEF
-        }
-
-        private eSymbolColor _SymbolColor = eSymbolColor.c434343;
-        private string _DisplayName = string.Empty;
+        private string _Name = string.Empty;
         private string _Description = string.Empty;
-        private ResourceDictionary _Resource = new();
+        private Color _SymbolColor = Colors.Wheat;
+        private ResourceDictionary _Resource = [];
 
         /////////////////////////////
         #endregion Fields
@@ -31,22 +23,22 @@ namespace sbwpf.Themer
         #region Properties
         /////////////////////////////
 
-        public eSymbolColor SymbolColor
+        public string Name
         {
-            get => _SymbolColor;
-            set => _SymbolColor = value;
-        }
-
-        public string DisplayName
-        {
-            get => _DisplayName;
-            set => _DisplayName = value;
+            get => _Name;
+            set => _Name = value;
         }
 
         public string Description
         {
             get => _Description;
             set => _Description = value;
+        }
+
+        public Color SymbolColor
+        {
+            get => _SymbolColor;
+            set => _SymbolColor = value;
         }
 
         public ResourceDictionary Resource
@@ -64,9 +56,9 @@ namespace sbwpf.Themer
 
         }
 
-        public Theme(string displayName, string description, eSymbolColor symbolColor, ResourceDictionary resource)
+        public Theme(string displayName, string description, Color symbolColor, ResourceDictionary resource)
         {
-            DisplayName = displayName;
+            Name = displayName;
             Description = description;
             SymbolColor = symbolColor;
             Resource = resource;

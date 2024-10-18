@@ -1,9 +1,11 @@
 ﻿
+using sbwpf.Core;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Media;
 
 namespace sbwpf.Themer
 {
@@ -98,7 +100,7 @@ namespace sbwpf.Themer
 
                     ReloadTemplates();
 
-                    ThemeChanged?.Invoke(value, new PropertyChangedEventArgs("ActiveTheme"));
+                    ThemeChanged?.Invoke(value, new PropertyChangedEventArgs(nameof(ActiveTheme)));
                 }
                 catch(Exception ex)
                 {
@@ -113,7 +115,7 @@ namespace sbwpf.Themer
         
         private static bool IsSystemTheme(Theme theme)
         {
-            return theme.DisplayName.Equals("system", StringComparison.CurrentCultureIgnoreCase);
+            return theme.Name.Equals("system", StringComparison.CurrentCultureIgnoreCase);
         }
 
         private static void SampleSystemColors()
@@ -206,19 +208,19 @@ namespace sbwpf.Themer
 
         }
 
-        private static void BuildTheme(string name, string description, Theme.eSymbolColor symbolColor, string filename)
+        private static void BuildTheme(string name, string description, string hexArgbString, string filename)
         {
-            string uri = $"/sbux.wpf.Themer;component/Themes/{filename}";
+            string uri = $"/sbwpf.Themer;component/Themes/{filename}";
             Themes.Add(new Theme(
                 name,
                 description,
-                symbolColor,
+                (Color)ColorConverter.ConvertFromString(hexArgbString),
                 new ResourceDictionary() { Source = new Uri(uri, UriKind.RelativeOrAbsolute) }));
         }
 
         private static void BuildTemplate(string filename)
         {
-            string uri = $"/sbux.wpf.Themer;component/Templates/{filename}";
+            string uri = $"/sbwpf.Themer;component/Templates/{filename}";
             Templates.Add(new ResourceDictionary() { Source = new Uri(uri, UriKind.RelativeOrAbsolute) });
         }
 
@@ -226,14 +228,10 @@ namespace sbwpf.Themer
         {
             ThemeSymbolManager.Initialize();
 
-            //BuildTheme(Theme.eThemeType.Undefined, "System", "System Theme", "Theme_System.xaml");
-            BuildTheme("Light", "Light Theme", Theme.eSymbolColor.c242424, "Theme_Light.xaml");
-            BuildTheme("Dark", "Dark Theme", Theme.eSymbolColor.cC0C0C0, "Theme_Dark.xaml");
-            BuildTheme("Green", "Green Theme", Theme.eSymbolColor.cC0C0C0, "Theme_Green.xaml");
-            BuildTheme("Blue Steel", "Blue Steel Theme", Theme.eSymbolColor.cC0C0C0, "Theme_BlueSteel.xaml");
-            //BuildTheme("Blue White", "Blue White Theme", Theme.eSymbolColor.cC0C0C0, "Theme_BlueWhite.xaml");
-            //BuildTheme("Blue Gray", "Blue Gray", Theme.eSymbolColor.c434343, "Theme_BlueGray.xaml");
-            //BuildTheme("Light Pastel", "Light Pastel", Theme.eSymbolColor.c242424, "Theme_LightPastel.xaml");
+            BuildTheme("Light", "Light Theme", "#242424", "Theme_Light.xaml");
+            BuildTheme("Dark", "Dark Theme", "#C0C0C0", "Theme_Dark.xaml");
+            BuildTheme("Green", "Green Theme", "#C0C0C0", "Theme_Green.xaml");
+            BuildTheme("Blue Steel", "Blue Steel Theme", "#C0C0C0", "Theme_BlueSteel.xaml");
 
             BuildTemplate("Border.xaml");
             BuildTemplate("Button.xaml");
@@ -299,7 +297,7 @@ namespace sbwpf.Themer
         {
             foreach (var theme in Themes)
             {
-                if (theme.DisplayName.Equals(themeName, StringComparison.CurrentCultureIgnoreCase))
+                if (theme.Name.Equals(themeName, StringComparison.CurrentCultureIgnoreCase))
                 {
                     ActiveTheme = theme;
                     ReloadTemplates();

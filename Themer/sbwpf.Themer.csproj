@@ -17,9 +17,13 @@
     <None Remove="Symbols\add_image.png" />
     <None Remove="Symbols\alarm.png" />
     <None Remove="Symbols\arrow_back.png" />
+    <None Remove="Symbols\arrow_down2.png" />
+    <None Remove="Symbols\arrow_down3.png" />
     <None Remove="Symbols\arrow_drop_down.png" />
     <None Remove="Symbols\arrow_forward.png" />
     <None Remove="Symbols\arrow_right.png" />
+    <None Remove="Symbols\arrow_up2.png" />
+    <None Remove="Symbols\arrow_up3.png" />
     <None Remove="Symbols\attach_email.png" />
     <None Remove="Symbols\attach_file.png" />
     <None Remove="Symbols\book.png" />
@@ -119,318 +123,334 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Symbols\add.png">
+    <ProjectReference Include="..\Core\sbwpf.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Symbols\add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\add_attachment.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\add_attachment.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\add_image.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\add_image.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\alarm.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\alarm.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\arrow_back.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_back.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\arrow_drop_down.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_down2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\arrow_forward.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_down3.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\arrow_right.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_drop_down.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\attach_email.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_forward.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\attach_file.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_right.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\book.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_up2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\bookmark.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_up3.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\bookmarks.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\attach_email.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\bookmark_add.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\attach_file.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\cancel.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\book.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\check.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\bookmark.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\check_circle.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\bookmarks.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\chevron_left.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\bookmark_add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\chevron_right.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\cancel.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\close.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\check.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\contact.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\check_circle.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\content_copy.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\chevron_left.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\content_cut.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\chevron_right.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\content_paste.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\close.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\delete.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\contact.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\double_arrow_down.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\content_copy.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\double_arrow_left.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\content_cut.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\double_arrow_right.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\content_paste.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\double_arrow_up.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\delete.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\draft.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\double_arrow_down.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\drafts.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\double_arrow_left.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\edit.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\double_arrow_right.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\edit2.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\double_arrow_up.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\email.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\draft.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\encrypted.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\drafts.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\encrypted_add.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\edit.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\expand_circle.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\edit2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\explore.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\email.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\favorite.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\encrypted.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\file_open.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\encrypted_add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\find.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\expand_circle.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\folder.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\explore.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_align_center.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\favorite.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_align_left.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\file_open.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_align_right.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\find.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_bold.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\folder.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_italic.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_align_center.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_size.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_align_left.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\format_underlined.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_align_right.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\group.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_bold.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\help.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_italic.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\home.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_size.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\image.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\format_underlined.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\inbox.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\group.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\key.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\help.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\key_off.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\home.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\key_vertical.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\image.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\language.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\inbox.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\library_add.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\key.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\link.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\key_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\lock.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\key_vertical.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\lock_open.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\language.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\login.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\library_add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\mail.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\link.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\mark_as_unread2.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\lock.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\mark_email_unread.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\lock_open.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\menu.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\login.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\menu_book.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mail.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\mic.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mark_as_unread2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\mic_off.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mark_email_unread.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\minimize.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\menu.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\more_horiz.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\menu_book.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\more_vert.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mic.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\music_note.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mic_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\music_off.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\minimize.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\outbox.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\more_horiz.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\passkey.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\more_vert.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\password.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\music_note.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\password_2.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\music_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\person.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\outbox.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\person_add.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\passkey.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\question_mark.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\password.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\redo.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\password_2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\refresh.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\person.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\remove.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\person_add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\search.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\question_mark.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\searchbox.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\redo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\send.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\refresh.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\settings.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\remove.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\share.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\search.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\sort.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\searchbox.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\star.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\send.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\sync.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\settings.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\timelapse.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\share.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\timer.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\sort.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\timer_off.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\star.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\timer_run.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\sync.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\timer_snooze.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\timelapse.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\toggle_off.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\timer.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\toggle_on.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\timer_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\trash.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\timer_run.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\undo.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\timer_snooze.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\zoom_in.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\toggle_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Symbols\zoom_out.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\toggle_on.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\trash.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\undo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\zoom_in.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\zoom_out.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
