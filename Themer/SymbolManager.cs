@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -42,10 +43,17 @@ namespace sbwpf.Themer
 
             for (int i = 0; i < pixels.Length; i += 4)
             {
+                // Skip the transparent pixels
+                if (pixels[i+3] == 0)
+                {
+                    continue;
+                }
+
+                // Color pixels are overwritten with the new color, preserving alpha value
                 pixels[i] = targetColor.B;
                 pixels[i + 1] = targetColor.G;
                 pixels[i + 2] = targetColor.R;
-                pixels[i + 3] = pixels[i + 3]; // Preserve alpha channel
+                pixels[i + 3] = pixels[i + 3];
             }
 
             var newBitmap = BitmapSource.Create(
