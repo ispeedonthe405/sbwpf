@@ -1,5 +1,8 @@
 ﻿using System.IO;
+using System.Reflection;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
+using System.Xml.Linq;
 
 namespace sbwpf.Core
 {
@@ -38,7 +41,7 @@ namespace sbwpf.Core
             }
             catch (Exception ex)
             {
-                Logger.Exception(ex);
+                Logger.Error(ex);
             }
         }
 
@@ -51,8 +54,33 @@ namespace sbwpf.Core
             }
             catch (Exception ex)
             {
-                Logger.Exception(ex);
+                Logger.Error(ex);
             }
+        }
+
+        public static string LoadResourceString(string path)
+        {
+            string result = string.Empty;
+
+            try
+            {
+                using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(path))
+                {
+                    if (resource is not null)
+                    {
+                        using (var stream = new StreamReader(resource))
+                        {
+                            result = stream.ReadToEnd();
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Logger.Error(ex);
+            }
+
+            return result;
         }
     }
 }
