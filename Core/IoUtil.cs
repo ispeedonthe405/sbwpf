@@ -1,17 +1,15 @@
 ﻿using System.IO;
 using System.Reflection;
-using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
-using System.Xml.Linq;
 
 namespace sbwpf.Core
 {
     public static class IoUtil
     {
-        public static JsonSerializerOptions JsonWriterOptions
+        public static JsonSerializerOptions JsonWriterOptions { get; } = new()
         {
-            get { return new() { WriteIndented = true }; }
-        }
+            WriteIndented = true
+        };
 
         public static bool IsValidFilename(string filename)
         {
@@ -81,6 +79,24 @@ namespace sbwpf.Core
             }
 
             return result;
+        }
+
+        public static List<string> GetResourceNames(string prefix, string suffix)
+        {
+            List<string> names = [];
+
+            try
+            {
+                names = Assembly.GetCallingAssembly().GetManifestResourceNames().Where(r =>
+                    r.StartsWith(prefix, StringComparison.CurrentCultureIgnoreCase) &&
+                    r.EndsWith(suffix, StringComparison.CurrentCultureIgnoreCase)).ToList();
+            }
+            catch(Exception ex)
+            {
+                Logger.Debug(ex);
+            }
+
+            return names;
         }
     }
 }
