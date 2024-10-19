@@ -4,7 +4,7 @@
     <Style x:Key="{x:Type Label}" TargetType="Label">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}" />
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -18,7 +18,7 @@
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource ForegroundDisabled}" />
+                                    <SolidColorBrush Color="{DynamicResource ForegroundDisabledColor}" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>

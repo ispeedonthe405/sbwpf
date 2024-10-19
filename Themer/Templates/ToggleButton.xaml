@@ -5,7 +5,7 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource ForegroundNormalBrushKey}" 
+                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource ForegroundNormalBrush}" 
                                SnapsToDevicePixels="true" StrokeThickness="1"/>
                 </ControlTemplate>
             </Setter.Value>
@@ -14,9 +14,9 @@
     
     <Style TargetType="{x:Type ToggleButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-        <Setter Property="Background" Value="{DynamicResource ControlNormalBrushKey}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrushKey}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+        <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -38,33 +38,33 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Button.IsDefaulted" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource HighlightNormalBrushKey}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource HighlightNormalBrush}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlMouseOverBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderMouseOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlMouseOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderMouseOverBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlPressedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderPressedBrushKey}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlPressedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderPressedBrush}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlPressedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderPressedBrushKey}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlPressedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderPressedBrush}"/>
                         </Trigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsChecked" Value="True"/>
                                 <Condition Property="IsMouseOver" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlMouseOverBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderMouseOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlMouseOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderMouseOverBrush}"/>
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Opacity" TargetName="border" Value="0.5"/>
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlDisabledBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderDisabledBrushKey}"/>
-                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource ForegroundDisabledBrushKey}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlDisabledBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderDisabledBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource ForegroundDisabledBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

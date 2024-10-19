@@ -14,16 +14,16 @@
                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                 <LinearGradientBrush.GradientStops>
                                     <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource BorderLight}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource BorderDark}" Offset="1.0" />
+                                        <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
+                                        <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
                                     </GradientStopCollection>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </Ellipse.Stroke>
                         <Ellipse.Fill>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="{DynamicResource ControlMedium}" Offset="1" />
-                                <GradientStop Color="{DynamicResource ControlLight}" />
+                                <GradientStop Color="{DynamicResource ControlMediumColor}" Offset="1" />
+                                <GradientStop Color="{DynamicResource ControlLightColor}" />
                             </LinearGradientBrush>
                         </Ellipse.Fill>
                         <VisualStateManager.VisualStateGroups>
@@ -32,14 +32,14 @@
                                 <Storyboard>
                                     <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
                                                                   Storyboard.TargetName="Ellipse">
-                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlNormal}" />
+                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlNormalColor}" />
                                     </ColorAnimationUsingKeyFrames>
                                 </Storyboard>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
                                                                       Storyboard.TargetName="Ellipse">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlMouseOver}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlMouseOverColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -47,7 +47,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
                                                                       Storyboard.TargetName="Ellipse">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlPressed}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlPressedColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -55,7 +55,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)"
                                                                       Storyboard.TargetName="Ellipse">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlDisabled}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlDisabledColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

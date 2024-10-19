@@ -4,9 +4,9 @@
     <Style x:Key="{x:Type ToolTip}" TargetType="ToolTip">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="HasDropShadow" Value="True" />
-        <Setter Property="Background" Value="{DynamicResource ControlNormalBrushKey}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrushKey}"/>
+        <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrush}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -19,15 +19,15 @@
                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                 <LinearGradientBrush.GradientStops>
                                     <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource ControlLight}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource ControlMedium}" Offset="1.0" />
+                                        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="0.0" />
+                                        <GradientStop Color="{DynamicResource ControlMediumColor}" Offset="1.0" />
                                     </GradientStopCollection>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
 
                         </Border.Background>
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="{DynamicResource BorderMedium}" />
+                            <SolidColorBrush Color="{DynamicResource BorderMediumColor}" />
                         </Border.BorderBrush>
                         <ContentPresenter Margin="4"
                                           HorizontalAlignment="Left"

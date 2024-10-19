@@ -14,16 +14,16 @@
                                 <Ellipse x:Name="Border" StrokeThickness="1">
                                     <Ellipse.Stroke>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="{DynamicResource BorderLight}" Offset="0" />
-                                            <GradientStop Color="{DynamicResource BorderDark}" Offset="1" />
+                                            <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0" />
+                                            <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1" />
                                         </LinearGradientBrush>
                                     </Ellipse.Stroke>
                                     <Ellipse.Fill>
                                         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                             <LinearGradientBrush.GradientStops>
                                                 <GradientStopCollection>
-                                                    <GradientStop Color="{DynamicResource ControlNormal}" Offset="0" />
-                                                    <GradientStop Color="{DynamicResource ControlDark}" Offset="1.0" />
+                                                    <GradientStop Color="{DynamicResource ControlNormalColor}" Offset="0" />
+                                                    <GradientStop Color="{DynamicResource ControlDarkColor}" Offset="1.0" />
                                                 </GradientStopCollection>
                                             </LinearGradientBrush.GradientStops>
                                         </LinearGradientBrush>
@@ -31,7 +31,7 @@
                                 </Ellipse>
                                 <Ellipse x:Name="CheckMark" Margin="4" Visibility="Collapsed">
                                     <Ellipse.Fill>
-                                        <SolidColorBrush Color="{DynamicResource ForegroundNormal}" />
+                                        <SolidColorBrush Color="{DynamicResource ForegroundNormalColor}" />
                                     </Ellipse.Fill>
                                 </Ellipse>
                             </Grid>
@@ -43,7 +43,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                       Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlMouseOver}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlMouseOverColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -51,7 +51,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                       Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlPressed}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlPressedColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -59,15 +59,15 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                       Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLight}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLightColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" 
                                                                       Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLight}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLightColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" 
                                                                       Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLight}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlLightColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

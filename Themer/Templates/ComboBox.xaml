@@ -8,7 +8,7 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource HighlightNormalBrushKey}" 
+                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource HighlightNormalBrush}" 
                                SnapsToDevicePixels="true" StrokeThickness="1"/>
                 </ControlTemplate>
             </Setter.Value>
@@ -44,14 +44,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="templateRoot" Background="{DynamicResource ControlNormalBrushKey}" 
-                            BorderBrush="{DynamicResource BorderNormalBrushKey}" BorderThickness="{TemplateBinding BorderThickness}" 
+                    <Border x:Name="templateRoot" Background="{DynamicResource ControlNormalBrush}" 
+                            BorderBrush="{DynamicResource BorderNormalBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             SnapsToDevicePixels="true">
                         <Border x:Name="splitBorder" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Right" Margin="0" 
                                 SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
                             <Path x:Name="arrow" 
                                   Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z" 
-                                  Fill="{DynamicResource ForegroundNormalBrushKey}" 
+                                  Fill="{DynamicResource ForegroundNormalBrush}" 
                                   HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
                         </Border>
                     </Border>
@@ -63,73 +63,73 @@
                                 <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Mode=Self}}" Value="false"/>
                                 <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Mode=Self}}" Value="true"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlNormalBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderNormalBrushKey}"/>
-                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlNormalBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderNormalBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlNormalBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderNormalBrush}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlNormalBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderNormalBrush}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundMouseOverBrushKey}"/>
+                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundMouseOverBrush}"/>
                         </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=Self}}" Value="true"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlMouseOverBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderMouseOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlMouseOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderMouseOverBrush}"/>
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=Self}}" Value="true"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlNormalBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderNormalBrushKey}"/>
-                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlNormalBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderNormalBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlNormalBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderNormalBrush}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlNormalBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderNormalBrush}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundPressedBrushKey}"/>
+                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundPressedBrush}"/>
                         </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Mode=Self}}" Value="true"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlPressedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderPressedBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlPressedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderPressedBrush}"/>
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Mode=Self}}" Value="true"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlPressedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderPressedBrushKey}"/>
-                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlPressedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderPressedBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlPressedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderPressedBrush}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlPressedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderPressedBrush}"/>
                         </MultiDataTrigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundDisabledBrushKey}"/>
+                            <Setter Property="Fill" TargetName="arrow" Value="{DynamicResource ForegroundDisabledBrush}"/>
                         </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Mode=Self}}" Value="false"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlDisabledBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderDisabledBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlDisabledBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderDisabledBrush}"/>
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Mode=Self}}" Value="false"/>
                                 <Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlDisabledBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderDisabledBrushKey}"/>
-                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlDisabledBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderDisabledBrushKey}"/>
+                            <Setter Property="Background" TargetName="templateRoot" Value="{DynamicResource ControlDisabledBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="templateRoot" Value="{DynamicResource BorderDisabledBrush}"/>
+                            <Setter Property="Background" TargetName="splitBorder" Value="{DynamicResource ControlDisabledBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="splitBorder" Value="{DynamicResource BorderDisabledBrush}"/>
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -148,8 +148,8 @@
                    PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
                 <theme:SystemDropShadowChrome x:Name="shadow" Color="Transparent" 
                                               MinWidth="{Binding ActualWidth, ElementName=templateRoot}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                    <Border x:Name="dropDownBorder" Background="{DynamicResource BackgroundNormalBrushKey}" 
-                            BorderBrush="{DynamicResource BorderNormalBrushKey}" BorderThickness="1">
+                    <Border x:Name="dropDownBorder" Background="{DynamicResource BackgroundNormalBrush}" 
+                            BorderBrush="{DynamicResource BorderNormalBrush}" BorderThickness="1">
                         <ScrollViewer x:Name="DropDownScrollViewer">
                             <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                                 <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
@@ -180,7 +180,7 @@
                 <Setter Property="Opacity" TargetName="border" Value="1.0"/>
             </Trigger>
             <Trigger Property="IsKeyboardFocusWithin" Value="true">
-                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
             </Trigger>
             <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="true">
                 <Setter Property="Margin" TargetName="shadow" Value="0,0,5,5"/>
@@ -215,8 +215,8 @@
                 <theme:SystemDropShadowChrome x:Name="shadow" Color="Transparent" 
                                               MinWidth="{Binding ActualWidth, ElementName=templateRoot}" 
                                               MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                    <Border x:Name="dropDownBorder" Background="{DynamicResource ControlNormalBrushKey}" 
-                            BorderBrush="{DynamicResource BorderNormalBrushKey}" BorderThickness="1">
+                    <Border x:Name="dropDownBorder" Background="{DynamicResource ControlNormalBrush}" 
+                            BorderBrush="{DynamicResource BorderNormalBrush}" BorderThickness="1">
                         <ScrollViewer x:Name="DropDownScrollViewer">
                             <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                                 <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
@@ -271,9 +271,9 @@
     
     <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-        <Setter Property="Background" Value="{DynamicResource ControlNormalBrushKey}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrushKey}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+        <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
@@ -304,7 +304,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                   Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -312,7 +312,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                   Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightMouseOver}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightMouseOverColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -323,14 +323,14 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                   Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="SelectedUnfocused">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightInactive}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightInactiveColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

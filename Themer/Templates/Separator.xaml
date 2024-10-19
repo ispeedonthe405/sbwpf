@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!--<Style x:Key="{x:Type Separator}" TargetType="{x:Type Separator}">
-        <Setter Property="Background" Value="{DynamicResource BorderMediumBrushKey}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderMediumBrushKey}"/>
+        <Setter Property="Background" Value="{DynamicResource BorderMediumBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderMediumBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Margin" Value="0,5"/>
         <Setter Property="Template">

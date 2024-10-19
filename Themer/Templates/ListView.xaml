@@ -83,9 +83,9 @@
                            EndPoint="0,1">
                     <LinearGradientBrush.GradientStops>
                         <GradientStopCollection>
-                            <GradientStop Color="{DynamicResource BorderMedium}"
+                            <GradientStop Color="{DynamicResource BorderMediumColor}"
                           Offset="0.0" />
-                            <GradientStop Color="{DynamicResource BorderMedium}"
+                            <GradientStop Color="{DynamicResource BorderMediumColor}"
                           Offset="1.0" />
                         </GradientStopCollection>
                     </LinearGradientBrush.GradientStops>
@@ -124,7 +124,7 @@
         <Setter Property="VerticalContentAlignment"
           Value="Center" />
         <Setter Property="Foreground"
-          Value="{DynamicResource ForegroundNormalBrushKey}" />
+          Value="{DynamicResource ForegroundNormalBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="GridViewColumnHeader">
@@ -138,7 +138,7 @@
                     (GradientBrush.GradientStops)[1].(GradientStop.Color)"
                                                 Storyboard.TargetName="HeaderBorder">
                                             <EasingColorKeyFrame KeyTime="0"
-                                         Value="{DynamicResource ControlMouseOver}" />
+                                         Value="{DynamicResource ControlMouseOverColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -154,9 +154,9 @@
                                    EndPoint="0,1">
                                     <LinearGradientBrush.GradientStops>
                                         <GradientStopCollection>
-                                            <GradientStop Color="{DynamicResource BorderMedium}"
+                                            <GradientStop Color="{DynamicResource BorderMediumColor}"
                                   Offset="0.0" />
-                                            <GradientStop Color="{DynamicResource BorderMedium}"
+                                            <GradientStop Color="{DynamicResource BorderMediumColor}"
                                   Offset="1.0" />
                                         </GradientStopCollection>
                                     </LinearGradientBrush.GradientStops>
@@ -169,9 +169,9 @@
                                    EndPoint="0,1">
                                     <LinearGradientBrush.GradientStops>
                                         <GradientStopCollection>
-                                            <GradientStop Color="{DynamicResource BackgroundNormal}"
+                                            <GradientStop Color="{DynamicResource BackgroundNormalColor}"
                                   Offset="0.0" />
-                                            <GradientStop Color="{DynamicResource BackgroundNormal}"
+                                            <GradientStop Color="{DynamicResource BackgroundNormalColor}"
                                   Offset="1.0" />
                                         </GradientStopCollection>
                                     </LinearGradientBrush.GradientStops>
@@ -217,16 +217,16 @@
                         <ControlTemplate TargetType="GridViewColumnHeader">
                             <Border Name="HeaderBorder" BorderThickness="0,1,0,1">
                                 <Border.Background>
-                                    <SolidColorBrush Color="{DynamicResource ControlNormal}" />
+                                    <SolidColorBrush Color="{DynamicResource ControlNormalColor}" />
                                 </Border.Background>
                                 <Border.BorderBrush>
                                     <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="0,1">
                                         <LinearGradientBrush.GradientStops>
                                             <GradientStopCollection>
-                                                <GradientStop Color="{DynamicResource BorderMedium}"
+                                                <GradientStop Color="{DynamicResource BorderMediumColor}"
                                     Offset="0.0" />
-                                                <GradientStop Color="{DynamicResource BorderMedium}"
+                                                <GradientStop Color="{DynamicResource BorderMediumColor}"
                                     Offset="1.0" />
                                             </GradientStopCollection>
                                         </LinearGradientBrush.GradientStops>
@@ -253,10 +253,10 @@
                 <ControlTemplate TargetType="ListView">
                     <Border Name="Border" BorderThickness="1">
                         <Border.Background>
-                            <SolidColorBrush Color="{DynamicResource BackgroundNormal}" />
+                            <SolidColorBrush Color="{DynamicResource BackgroundNormalColor}" />
                         </Border.Background>
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="{DynamicResource BorderMedium}" />
+                            <SolidColorBrush Color="{DynamicResource BorderMediumColor}" />
                         </Border.BorderBrush>
                         <ScrollViewer Style="{DynamicResource {x:Static GridView.GridViewScrollViewerStyleKey}}">
                             <ItemsPresenter />
@@ -269,7 +269,7 @@
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource BackgroundNormal}" />
+                                    <SolidColorBrush Color="{DynamicResource BackgroundNormalColor}" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -282,8 +282,8 @@
     <Style x:Key="{x:Type ListViewItem}" TargetType="ListViewItem">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
-        <Setter Property="Background" Value="{DynamicResource ControlNormalBrushKey}"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+        <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -298,27 +298,27 @@
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightMouseOverBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource BorderMouseOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightMouseOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource BorderMouseOverBrush}"/>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Selector.IsSelectionActive" Value="False"/>
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightInactiveBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ControlNormalBrushKey}"/>
+                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightInactiveBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ControlNormalBrush}"/>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Selector.IsSelectionActive" Value="True"/>
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightSelectedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ControlNormalBrushKey}"/>
+                            <Setter Property="Background" TargetName="Border" Value="{DynamicResource HighlightSelectedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Border" Value="{DynamicResource ControlNormalBrush}"/>
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ForegroundDisabledBrushKey}"/>
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource ForegroundDisabledBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 

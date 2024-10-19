@@ -6,7 +6,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Rectangle Margin="2" StrokeDashArray="1 2" 
-                               Stroke="{DynamicResource ForegroundNormalBrushKey}" 
+                               Stroke="{DynamicResource ForegroundNormalBrush}" 
                                SnapsToDevicePixels="true" StrokeThickness="1"/>
                 </ControlTemplate>
             </Setter.Value>
@@ -41,30 +41,30 @@
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsMouseOver" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightMouseOverBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderMouseOverBrushKey}"/>
-                            <Setter Property="Foreground" Value="{DynamicResource ForegroundMouseOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightMouseOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderMouseOverBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundMouseOverBrush}"/>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Selector.IsSelectionActive" Value="False"/>
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightInactiveBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderInactiveBrushKey}"/>
-                            <Setter Property="Foreground" Value="{DynamicResource ForegroundSelectedOverBrushKey}"/>
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightInactiveBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderInactiveBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundSelectedOverBrush}"/>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="Selector.IsSelectionActive" Value="True"/>
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightSelectedBrushKey}"/>
-                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderSelectedBrushKey}"/>
-                            <Setter Property="Foreground" Value="{DynamicResource ForegroundMouseOverBrushKey}"/>                            
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightSelectedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderSelectedBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundMouseOverBrush}"/>                            
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource ForegroundDisabledBrushKey}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource ForegroundDisabledBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

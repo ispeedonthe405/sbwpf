@@ -6,7 +6,7 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TreeView">
@@ -14,10 +14,10 @@
                             CornerRadius="1"
                             BorderThickness="1">
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="{DynamicResource BorderNormal}" />
+                            <SolidColorBrush Color="{DynamicResource BorderNormalColor}" />
                         </Border.BorderBrush>
                         <Border.Background>
-                            <SolidColorBrush Color="{DynamicResource ControlNormal}" />
+                            <SolidColorBrush Color="{DynamicResource ControlNormalColor}" />
                         </Border.Background>
                         <ScrollViewer Focusable="False"
                                       CanContentScroll="False"
@@ -62,7 +62,7 @@
                               Margin="1,1,1,1"
                               Data="M 4 0 L 8 4 L 4 8 Z">
                             <Path.Fill>
-                                <SolidColorBrush Color="{DynamicResource ForegroundNormal}" />
+                                <SolidColorBrush Color="{DynamicResource ForegroundNormalColor}" />
                             </Path.Fill>
                         </Path>
                         <Path x:Name="Expanded"
@@ -72,7 +72,7 @@
                               Data="M 0 4 L 8 4 L 4 8 Z"
                               Visibility="Hidden">
                             <Path.Fill>
-                                <SolidColorBrush Color="{DynamicResource ForegroundNormal}" />
+                                <SolidColorBrush Color="{DynamicResource ForegroundNormalColor}" />
                             </Path.Fill>
                         </Path>
                     </Grid>
@@ -102,7 +102,7 @@
         <Setter Property="VerticalContentAlignment"
                 Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
         <Setter Property="Padding" Value="1,0,0,0" />
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}" />
         <Setter Property="FocusVisualStyle" Value="{StaticResource TreeViewItemFocusVisual}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -123,7 +123,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Bd"
                                                                       Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource ControlNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -131,7 +131,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Bd"
                                                                       Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -139,7 +139,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Bd"
                                                                       Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -149,7 +149,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Bd"
                                                                       Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormal}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -158,7 +158,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Bd"
                                                                       Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightInactive}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightInactiveColor}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

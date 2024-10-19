@@ -13,8 +13,8 @@
                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                 <LinearGradientBrush.GradientStops>
                                     <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource BorderLight}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource BorderDark}" Offset="1.0" />
+                                        <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
+                                        <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
                                     </GradientStopCollection>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
@@ -23,8 +23,8 @@
                             <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                                 <LinearGradientBrush.GradientStops>
                                     <GradientStopCollection>
-                                        <GradientStop Color="{DynamicResource ControlLight}" Offset="0.0" />
-                                        <GradientStop Color="{DynamicResource ControlDark}" Offset="1.0" />
+                                        <GradientStop Color="{DynamicResource ControlLightColor}" Offset="0.0" />
+                                        <GradientStop Color="{DynamicResource ControlDarkColor}" Offset="1.0" />
                                     </GradientStopCollection>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
@@ -46,7 +46,7 @@
                 <ControlTemplate TargetType="{x:Type Separator}">
                     <Rectangle Width="1" Margin="3">
                         <Rectangle.Fill>
-                            <SolidColorBrush Color="{DynamicResource BorderNormal}" />
+                            <SolidColorBrush Color="{DynamicResource BorderNormalColor}" />
                         </Rectangle.Fill>
                     </Rectangle>
                 </ControlTemplate>
@@ -64,14 +64,14 @@
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource ForegroundDisabled}" />
+                                    <SolidColorBrush Color="{DynamicResource ForegroundDisabledColor}" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource ForegroundNormal}" />
+                                    <SolidColorBrush Color="{DynamicResource ForegroundNormalColor}" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>

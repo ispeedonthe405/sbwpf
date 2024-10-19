@@ -5,10 +5,10 @@
         <Setter Property="TextWrapping" Value="NoWrap"/>
         <Setter Property="TextTrimming" Value="None"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="{DynamicResource ForegroundDisbledBrushKey}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundDisbledBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

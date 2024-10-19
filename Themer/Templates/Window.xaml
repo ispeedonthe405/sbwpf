@@ -3,13 +3,13 @@
 
     <Style x:Key="{x:Type Window}" TargetType="{x:Type Window}">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
-        <Setter Property="Background" Value="{DynamicResource BackgroundNormalBrushKey}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource BackgroundNormalBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
-                    <Border Background="{DynamicResource BackgroundNormalBrushKey}"
-                            BorderBrush="{DynamicResource BorderNormalBrushKey}"
+                    <Border Background="{DynamicResource BackgroundNormalBrush}"
+                            BorderBrush="{DynamicResource BorderNormalBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <AdornerDecorator>
                             <ContentPresenter/>

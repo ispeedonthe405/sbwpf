@@ -139,6 +139,10 @@
     <None Remove="Symbols\warning.png" />
     <None Remove="Symbols\zoom_in.png" />
     <None Remove="Symbols\zoom_out.png" />
+    <None Remove="Themes\Blue Steel.json" />
+    <None Remove="Themes\Dark.json" />
+    <None Remove="Themes\Green.json" />
+    <None Remove="Themes\Light.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -521,6 +525,18 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\zoom_out.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themes\Blue Steel.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themes\Dark.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themes\Green.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themes\Light.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

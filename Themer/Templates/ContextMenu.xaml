@@ -6,13 +6,13 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="Grid.IsSharedSizeScope" Value="true" />
         <Setter Property="HasDropShadow" Value="True" />
-        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrushKey}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContextMenu}">
-                    <Border x:Name="Border" Background="{DynamicResource ControlNormalBrushKey}" BorderThickness="1">
+                    <Border x:Name="Border" Background="{DynamicResource ControlNormalBrush}" BorderThickness="1">
                         <Border.BorderBrush>
-                            <SolidColorBrush Color="{DynamicResource BorderNormal}" />
+                            <SolidColorBrush Color="{DynamicResource BorderNormalColor}" />
                         </Border.BorderBrush>
                         <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" />
                     </Border>
