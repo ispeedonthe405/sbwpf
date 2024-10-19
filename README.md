@@ -18,3 +18,20 @@ Themer also features a new Image type, called ThemeSymbol. Symbols are images us
 ### Test:
 In addition to serving as my development test-case, it also serves as an example of how to integrate and use the various libs that make up the sbwpf package.
 
+---
+
+# To do:
+
+### Themer:
+- Move theme definition to JSON. Currently the theme definition resides in a resource dictionary. As JSON, in combination with a runtime-defined RD:
+  -  New themes could be created on the fly
+  -  Anyone could create a new theme
+Status: in progress
+
+### Controls:
+- Finish DataGridEx
+- Transfer WebView2 HTML designer/editor to this lib and clean it up for release
+
+### Core:
+- Extensions lib. A couple of the functions in there aren't actually extension functions. On reflection, they likely belong in a different lib.
+- 
