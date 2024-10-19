@@ -14,18 +14,11 @@ namespace sbwpf.Themer
 
         private static void BuildSymbols()
         {
-            string resourcePrefix = "sbwpf.Themer.Symbols.";
-            string resourceSuffix = ".png";
-            var assembly = Assembly.GetExecutingAssembly();
-
-            var symbolResources = assembly.GetManifestResourceNames().Where(r =>
-                r.StartsWith(resourcePrefix, StringComparison.CurrentCultureIgnoreCase) &&
-                r.EndsWith(resourceSuffix, StringComparison.CurrentCultureIgnoreCase)).ToList();
-
+            string prefix = "sbwpf.Themer.Symbols.";
+            string suffix = ".png";
+            var symbolResources = IoUtil.GetResourceNames(prefix, suffix);
             foreach (var resource in symbolResources)
             {
-                //string resourceName = resource[resourcePrefix.Length..];
-                //string symbolName = resourceName.Replace(".png", "");
                 using (var assemblyResource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource))
                 {
                     if (assemblyResource is not null)
@@ -35,7 +28,7 @@ namespace sbwpf.Themer
                         bmi.StreamSource = assemblyResource;
                         bmi.CacheOption = BitmapCacheOption.OnLoad;
                         bmi.EndInit();
-                        ThemeSymbols.Add(resource.Replace(resourcePrefix, "").Replace(resourceSuffix, ""), bmi);
+                        ThemeSymbols.Add(resource.Replace(prefix, "").Replace(suffix, ""), bmi);
                     }
                 }
             }
