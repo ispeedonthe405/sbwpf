@@ -15,20 +15,9 @@ namespace Test
         {
             base.OnStartup(e);
 
-            // Init and integrate sbwpf.Themer
+            // Initialize and integrate sbwpf.Themer
             ThemeManager.SetApplication(this);
             ThemeManager.ActiveTheme = ThemeManager.Themes.First();
-
-            FrameworkElement.StyleProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata
-            {
-                DefaultValue = FindResource(typeof(Window))
-            });
-            FrameworkElement.StyleProperty.OverrideMetadata(typeof(UserControl), new FrameworkPropertyMetadata
-            {
-                DefaultValue = FindResource(typeof(UserControl))
-            });
-
-            
         }
     }
 

@@ -28,6 +28,8 @@
         </ToolBar>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Label VerticalAlignment="Center" Content="ThemeSymbol examples:"/>
+            <Separator Width="20" Background="Transparent"/>
             <themer:ThemeSymbol SymbolName="add"/>
             <themer:ThemeSymbol SymbolName="key"/>
             <themer:ThemeSymbol SymbolName="cancel"/>

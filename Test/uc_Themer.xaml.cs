@@ -15,6 +15,7 @@ namespace sbwpf.Test
 
             cb_Themes.DisplayMemberPath = "Name";
             cb_Themes.ItemsSource = ThemeManager.Themes;
+            cb_Themes.SelectedItem = ThemeManager.ActiveTheme;
         }
 
         private void cb_Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
