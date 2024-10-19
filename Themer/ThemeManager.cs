@@ -2,9 +2,9 @@
 using sbwpf.Core;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace sbwpf.Themer
@@ -13,7 +13,6 @@ namespace sbwpf.Themer
     {
         ///////////////////////////////////////////////////////////
         #region INotifyPropertyChanged
-        /////////////////////////////
 
         public event PropertyChangedEventHandler? PropertyChanged;
         public static event PropertyChangedEventHandler? ThemeChanged;
@@ -38,7 +37,6 @@ namespace sbwpf.Themer
             }
         }
 
-        /////////////////////////////
         #endregion INotifyPropertyChanged
         ///////////////////////////////////////////////////////////
 
@@ -46,14 +44,12 @@ namespace sbwpf.Themer
 
         ///////////////////////////////////////////////////////////
         #region Fields
-        /////////////////////////////
 
         private static ObservableCollection<Theme> _Themes = [];
         private static ObservableCollection<ResourceDictionary> _Templates = [];
         private static Theme _ActiveTheme = new();
         private static Application? HostApp;
 
-        /////////////////////////////
         #endregion Fields
         ///////////////////////////////////////////////////////////
 
@@ -61,7 +57,6 @@ namespace sbwpf.Themer
 
         ///////////////////////////////////////////////////////////
         #region Properties
-        /////////////////////////////
 
         public static ObservableCollection<Theme> Themes
         {
@@ -79,11 +74,11 @@ namespace sbwpf.Themer
             set
             {
                 if (HostApp is null) return;
-
-                // Special case for system theme: allow that one through to resample the system colors
-                if (_ActiveTheme == value && !IsSystemTheme(value)) return;
-
                 if (value is not Theme theme) return;
+
+                // Special case for system theme: even though the incoming value is technically not new,
+                // allowing the flow to proceed past this point will trigger resampling of the system colors.
+                if (_ActiveTheme == value && !IsSystemTheme(value)) return;                
 
                 try
                 {
@@ -104,7 +99,7 @@ namespace sbwpf.Themer
                 }
                 catch(Exception ex)
                 {
-                    Debug.WriteLine(ex.Message);
+                    Logger.Debug(ex);
                 }
             }
         }
@@ -123,7 +118,7 @@ namespace sbwpf.Themer
             //Theme? theme = Themes.Where(t => t.DisplayName.Equals("system", StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
             //if(theme is null) return;
 
-            Debug.WriteLine("Sampling system colors");
+            Logger.Debug("Sampling system colors");
 
             ActiveTheme.Resource["BackgroundNormal"] = SystemColors.WindowColor;
             ActiveTheme.Resource["ForegroundNormal"] = SystemColors.WindowTextColor;
@@ -208,9 +203,17 @@ namespace sbwpf.Themer
 
         }
 
-        private static void BuildTheme(string name, string description, string hexArgbString, string filename)
+        /// <summary>
+        /// Until this point, a theme exists only as a resource dictionary.
+        /// Now it becomes a class, so think of this as the constructor.
+        /// </summary>
+        /// <param name="name">Theme name</param>
+        /// <param name="description">Theme description</param>
+        /// <param name="hexArgbString">The color for control symbols in this theme</param>
+        /// <param name="xamlName">The xaml file of this theme. Filename only; the resource path is automatic.</param>
+        private static void BuildTheme(string name, string description, string hexArgbString, string xamlName)
         {
-            string uri = $"/sbwpf.Themer;component/Themes/{filename}";
+            string uri = $"/sbwpf.Themer;component/Themes/{xamlName}";
             Themes.Add(new Theme(
                 name,
                 description,
@@ -255,8 +258,9 @@ namespace sbwpf.Themer
             BuildTemplate("ToggleButton.xaml");
             BuildTemplate("ToolTip.xaml");
             BuildTemplate("TreeView.xaml");
+            BuildTemplate("Window.xaml");
 
-            // Breaking the alphabetical pattern here because the toolbar template is partially based on other templates
+            // Breaking the alphabetical pattern here, because Toolbar is a bit of a special case.
             BuildTemplate("Toolbar.xaml");
 
             LoadTemplates();
@@ -291,6 +295,15 @@ namespace sbwpf.Themer
             Initialize();
             
             application?.Resources.MergedDictionaries.Add(ActiveTheme.Resource);
+
+            FrameworkElement.StyleProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata
+            {
+                DefaultValue = application?.FindResource(typeof(Window))
+            });
+            FrameworkElement.StyleProperty.OverrideMetadata(typeof(UserControl), new FrameworkPropertyMetadata
+            {
+                DefaultValue = application?.FindResource(typeof(UserControl))
+            });
         }
 
         public static void SetTheme(string themeName)

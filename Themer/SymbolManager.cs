@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using sbwpf.Core;
+using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -10,23 +12,32 @@ namespace sbwpf.Themer
     {
         public static Dictionary<string, BitmapSource> ThemeSymbols { get; private set; } = [];
 
-
         private static void BuildSymbols()
         {
             string resourcePrefix = "sbwpf.Themer.Symbols.";
+            string resourceSuffix = ".png";
             var assembly = Assembly.GetExecutingAssembly();
 
             var symbolResources = assembly.GetManifestResourceNames().Where(r =>
                 r.StartsWith(resourcePrefix, StringComparison.CurrentCultureIgnoreCase) &&
-                r.EndsWith(".png", StringComparison.CurrentCultureIgnoreCase)).ToList();
+                r.EndsWith(resourceSuffix, StringComparison.CurrentCultureIgnoreCase)).ToList();
 
             foreach (var resource in symbolResources)
             {
-                string resourceName = resource[resourcePrefix.Length..];
-                string symbolName = resourceName.Replace(".png", "");
-                string uriString = $"pack://application:,,,/{assembly.GetName().Name};component/Symbols/{resourceName}";
-
-                ThemeSymbols.Add(symbolName, new BitmapImage(new(uriString)));
+                //string resourceName = resource[resourcePrefix.Length..];
+                //string symbolName = resourceName.Replace(".png", "");
+                using (var assemblyResource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource))
+                {
+                    if (assemblyResource is not null)
+                    {
+                        BitmapImage bmi = new();
+                        bmi.BeginInit();
+                        bmi.StreamSource = assemblyResource;
+                        bmi.CacheOption = BitmapCacheOption.OnLoad;
+                        bmi.EndInit();
+                        ThemeSymbols.Add(resource.Replace(resourcePrefix, "").Replace(resourceSuffix, ""), bmi);
+                    }
+                }
             }
         }
 

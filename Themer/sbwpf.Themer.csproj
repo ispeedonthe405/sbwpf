@@ -17,11 +17,13 @@
     <None Remove="Symbols\add_image.png" />
     <None Remove="Symbols\alarm.png" />
     <None Remove="Symbols\arrow_back.png" />
+    <None Remove="Symbols\arrow_down.png" />
     <None Remove="Symbols\arrow_down2.png" />
     <None Remove="Symbols\arrow_down3.png" />
     <None Remove="Symbols\arrow_drop_down.png" />
     <None Remove="Symbols\arrow_forward.png" />
     <None Remove="Symbols\arrow_right.png" />
+    <None Remove="Symbols\arrow_up.png" />
     <None Remove="Symbols\arrow_up2.png" />
     <None Remove="Symbols\arrow_up3.png" />
     <None Remove="Symbols\attach_email.png" />
@@ -30,6 +32,7 @@
     <None Remove="Symbols\bookmark.png" />
     <None Remove="Symbols\bookmarks.png" />
     <None Remove="Symbols\bookmark_add.png" />
+    <None Remove="Symbols\browser1.png" />
     <None Remove="Symbols\cancel.png" />
     <None Remove="Symbols\check.png" />
     <None Remove="Symbols\check_circle.png" />
@@ -45,6 +48,7 @@
     <None Remove="Symbols\double_arrow_left.png" />
     <None Remove="Symbols\double_arrow_right.png" />
     <None Remove="Symbols\double_arrow_up.png" />
+    <None Remove="Symbols\download.png" />
     <None Remove="Symbols\draft.png" />
     <None Remove="Symbols\drafts.png" />
     <None Remove="Symbols\edit.png" />
@@ -52,9 +56,14 @@
     <None Remove="Symbols\email.png" />
     <None Remove="Symbols\encrypted.png" />
     <None Remove="Symbols\encrypted_add.png" />
+    <None Remove="Symbols\envelope.png" />
+    <None Remove="Symbols\error.png" />
+    <None Remove="Symbols\exclamation.png" />
+    <None Remove="Symbols\exclamation2.png" />
     <None Remove="Symbols\expand_circle.png" />
     <None Remove="Symbols\explore.png" />
     <None Remove="Symbols\favorite.png" />
+    <None Remove="Symbols\feedback.png" />
     <None Remove="Symbols\file_open.png" />
     <None Remove="Symbols\find.png" />
     <None Remove="Symbols\folder.png" />
@@ -73,6 +82,7 @@
     <None Remove="Symbols\key.png" />
     <None Remove="Symbols\key_off.png" />
     <None Remove="Symbols\key_vertical.png" />
+    <None Remove="Symbols\label.png" />
     <None Remove="Symbols\language.png" />
     <None Remove="Symbols\library_add.png" />
     <None Remove="Symbols\link.png" />
@@ -80,6 +90,7 @@
     <None Remove="Symbols\lock_open.png" />
     <None Remove="Symbols\login.png" />
     <None Remove="Symbols\mail.png" />
+    <None Remove="Symbols\mail_attach.png" />
     <None Remove="Symbols\mark_as_unread2.png" />
     <None Remove="Symbols\mark_email_unread.png" />
     <None Remove="Symbols\menu.png" />
@@ -91,12 +102,18 @@
     <None Remove="Symbols\more_vert.png" />
     <None Remove="Symbols\music_note.png" />
     <None Remove="Symbols\music_off.png" />
+    <None Remove="Symbols\notification.png" />
     <None Remove="Symbols\outbox.png" />
     <None Remove="Symbols\passkey.png" />
     <None Remove="Symbols\password.png" />
     <None Remove="Symbols\password_2.png" />
+    <None Remove="Symbols\people.png" />
     <None Remove="Symbols\person.png" />
     <None Remove="Symbols\person_add.png" />
+    <None Remove="Symbols\person_card.png" />
+    <None Remove="Symbols\person_page.png" />
+    <None Remove="Symbols\person_search.png" />
+    <None Remove="Symbols\postoffice.png" />
     <None Remove="Symbols\question_mark.png" />
     <None Remove="Symbols\redo.png" />
     <None Remove="Symbols\refresh.png" />
@@ -105,6 +122,7 @@
     <None Remove="Symbols\searchbox.png" />
     <None Remove="Symbols\send.png" />
     <None Remove="Symbols\settings.png" />
+    <None Remove="Symbols\severe_error.png" />
     <None Remove="Symbols\share.png" />
     <None Remove="Symbols\sort.png" />
     <None Remove="Symbols\star.png" />
@@ -118,12 +136,9 @@
     <None Remove="Symbols\toggle_on.png" />
     <None Remove="Symbols\trash.png" />
     <None Remove="Symbols\undo.png" />
+    <None Remove="Symbols\warning.png" />
     <None Remove="Symbols\zoom_in.png" />
     <None Remove="Symbols\zoom_out.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Core\sbwpf.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -142,6 +157,9 @@
     <EmbeddedResource Include="Symbols\arrow_back.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_down.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\arrow_down2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -155,6 +173,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\arrow_right.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\arrow_up.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\arrow_up2.png">
@@ -179,6 +200,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\bookmark_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\browser1.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\cancel.png">
@@ -226,6 +250,9 @@
     <EmbeddedResource Include="Symbols\double_arrow_up.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\download.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\draft.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -247,6 +274,18 @@
     <EmbeddedResource Include="Symbols\encrypted_add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\envelope.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\error.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\exclamation.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\exclamation2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\expand_circle.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -254,6 +293,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\favorite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\feedback.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\file_open.png">
@@ -310,6 +352,9 @@
     <EmbeddedResource Include="Symbols\key_vertical.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\label.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\language.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -329,6 +374,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\mail.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\mail_attach.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\mark_as_unread2.png">
@@ -364,6 +412,9 @@
     <EmbeddedResource Include="Symbols\music_off.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\notification.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\outbox.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -376,10 +427,25 @@
     <EmbeddedResource Include="Symbols\password_2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\people.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\person.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\person_add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\person_card.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\person_page.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\person_search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\postoffice.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\question_mark.png">
@@ -404,6 +470,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\severe_error.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\share.png">
@@ -445,12 +514,19 @@
     <EmbeddedResource Include="Symbols\undo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Symbols\warning.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Symbols\zoom_in.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Symbols\zoom_out.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\sbwpf.Core.csproj" />
   </ItemGroup>
 
 </Project>
