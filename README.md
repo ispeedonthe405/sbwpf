@@ -3,35 +3,26 @@
 ## A WPF application kit consisting of things I have found useful over time. The four assemblies are as follows:
 
 ### Core:
-- Logger: A lightweight event log system, supporting multiple categories (Debug, Info, Notify, Warning, Error, Exception). Easily binds to UX.
-- Extensions: Extension methods you might find useful, including some used in this package.
-- IoUtil: A collection of sanity-saving functions that helps to make the user code thinner and less repetetitive.
+Contains multiple sub-packages, including: 
+- A lightweight event logger
+- Extension methods for various types
+- Collections of helper functions for IO, JSON, and other foci
 
 ### Themer:
-Gives color-scheme support to both the stock UI and custom controls. Integration and API are simple. In addition to the default themes, it allows the programmer to create custom themes easily.
+Gives color-scheme support to both the stock UI and custom controls. Integration into your app is a one-line affair. In addition to the default themes, new themes can be defined using the JSON template.
 
-Themer also features a new Image type, called ThemeSymbol. Symbols are images used as control symbols with automatic color selection. Each theme specifies a symbol color. When the active theme is changed, the control symbols automatically recolor themselves to match. This means only one copy of the image library exists; the loaded, active list is recolored upon theme change.
+Themer also features a new Image type, called ThemeSymbol. ThemeSymbols are images for controls with automatic color change based on the active theme. 
 
 ### Controls:
-- DataGridEx: A small enhancement of the stock WPF DataGrid. It provides automatic saving and restoration of the DataGrid columns: reordering, resizing, and sorting are all captured automatically. All you have to do is implement the IControlSerializer interface and pass in an instance of that class to the DataGridEx instance. Your IControlSerializer implementation will define the details of how "Save" and "Load" work in your application.
+- DataGridEx: A small enhancement of the stock WPF DataGrid. It provides automatic saving and restoration of the DataGrid columns: reordering, resizing, and sorting are all captured automatically. All you have to do is implement the IControlSerializer interface and pass in an instance of that class to the DataGridEx instance. Your IControlSerializer implementation will define the details of how "Save" and "Load" work in your application. That is to say, your IControlSerializer might read & write the grid settings to a json file, or a database, or some other medium.
 
 ### Test:
-In addition to serving as my development test-case, it also serves as an example of how to integrate and use the various libs that make up the sbwpf package.
+In addition to serving as my development test-case, Test also serves as an example of how to integrate and use the various libs and modules that make up the sbwpf package.
 
 ---
 
 # To do:
 
-### Themer:
-- Move theme definition to JSON. Currently the theme definition resides in a resource dictionary. As JSON, in combination with a runtime-defined RD:
-  -  New themes could be created on the fly
-  -  Anyone could create a new theme
-Status: in progress
-
 ### Controls:
 - Finish DataGridEx
 - Transfer WebView2 HTML designer/editor to this lib and clean it up for release
-
-### Core:
-- Extensions lib. A couple of the functions in there aren't actually extension functions. On reflection, they likely belong in a different lib.
-- 
