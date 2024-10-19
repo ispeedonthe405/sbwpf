@@ -16,7 +16,7 @@ namespace Test
             base.OnStartup(e);
 
             // Initialize and integrate sbwpf.Themer
-            ThemeManager.SetApplication(this);
+            ThemeManager.Integrate(this);
             ThemeManager.ActiveTheme = ThemeManager.Themes.First();
         }
     }
