@@ -6,43 +6,6 @@ namespace sbwpf.Core
     public static class Extensions
     {
         ///////////////////////////////////////////////////////////
-        /// <summary>
-        /// It's tedious but helpful to be explicit in this block because
-        /// System.Drawing.Color also exists.
-        /// </summary>
-        #region System.Windows.Media.Color
-
-        public static string ToArgbString(this System.Windows.Media.Color color)
-        {
-            return $"{color.A}.{color.R}.{color.G}.{color.B}";
-        }
-
-        public static System.Windows.Media.Color FromArgbtring(string argbString)
-        {
-            System.Windows.Media.Color color = System.Windows.Media.Colors.White;
-            
-            try
-            {
-                string[] colorComponents = argbString.Split('.');
-                byte a = byte.Parse(colorComponents[0]);
-                byte r = byte.Parse(colorComponents[1]);
-                byte g = byte.Parse(colorComponents[2]);
-                byte b = byte.Parse(colorComponents[3]);
-                color = System.Windows.Media.Color.FromArgb(a, r, g, b);
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-            
-            return color;
-        }
-
-        #endregion System.Windows.Media.Color
-        ///////////////////////////////////////////////////////////
-
-
-        ///////////////////////////////////////////////////////////
         #region Dictionary
 
         public static Dictionary<string, string>? FromJsonResource(this Dictionary<string, string> dictionary, string resourcePath)
