@@ -669,6 +669,10 @@ namespace sbwpf.Themer
 
             SolidColorBrush newBrush = brush.Clone();
             newBrush.Color = color;
+            
+            // Why not just copy brush.Opacity?
+            // Because brush is a placeholder which is being overwritten here.
+            // Theme colors are specified in the JSON, in format hex-ARGB.
             newBrush.Opacity = MathUtils.NormalizeByte(brush.Color.A);
             brush = newBrush;
         }
