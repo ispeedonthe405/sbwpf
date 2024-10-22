@@ -33,6 +33,12 @@ namespace sbwpf.Test
         public string StringZero { get; set; } = nameof(StringZero);
         public string StringOne { get; set; } = nameof(StringOne);
         public Guid GuidOne { get; set; } = Guid.NewGuid();
+
+        public SampleData(string s1, string s2)
+        {
+            StringZero = s1;
+            StringOne = s2;
+        }
     }
 
     internal class SampleDataset : INotifyPropertyChanged
@@ -77,7 +83,7 @@ namespace sbwpf.Test
         {
             for(int i = 0; i < 10; i++)
             {
-                Samples.Add(new());
+                Samples.Add(new(i.ToString(), (i * 10).ToString()));
             }
         }
     }
