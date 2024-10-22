@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using sbwpf.Demo;
+using System.Windows.Controls;
 
 namespace sbwpf.Test
 {
@@ -10,7 +11,7 @@ namespace sbwpf.Test
         public uc_DataGridEx()
         {
             InitializeComponent();
-
+            datagrid.Serializer = DemoControlSerializer.Instance;
             datagrid.DataContext = SampleDataset.Samples;
         }
     }
