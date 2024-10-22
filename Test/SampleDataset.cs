@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics.Arm;
 
 namespace sbwpf.Test
 {
@@ -32,12 +33,13 @@ namespace sbwpf.Test
         
         public string StringZero { get; set; } = nameof(StringZero);
         public string StringOne { get; set; } = nameof(StringOne);
-        public Guid GuidOne { get; set; } = Guid.NewGuid();
+        public string StringTwo { get; set; } = nameof(StringTwo);
 
-        public SampleData(string s1, string s2)
+        public SampleData(string s0, string s1, string s2)
         {
-            StringZero = s1;
-            StringOne = s2;
+            StringZero = s0;
+            StringOne = s1;
+            StringTwo = s2;
         }
     }
 
@@ -83,7 +85,7 @@ namespace sbwpf.Test
         {
             for(int i = 0; i < 10; i++)
             {
-                Samples.Add(new(i.ToString(), (i * 10).ToString()));
+                Samples.Add(new(i.ToString(), (i * 10).ToString(), (i * 5).ToString()));
             }
         }
     }
