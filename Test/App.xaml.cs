@@ -1,10 +1,7 @@
 ﻿using sbwpf.Themer;
-using System.Configuration;
-using System.Data;
 using System.Windows;
-using System.Windows.Controls;
 
-namespace Test
+namespace Demo
 {
     /// <summary>
     /// Interaction logic for App.xaml
