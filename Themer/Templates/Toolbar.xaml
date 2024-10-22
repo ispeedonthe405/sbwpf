@@ -156,12 +156,12 @@
         <Setter Property="BorderBrush" Value="{DynamicResource ControlNormalBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}" />
     </Style>
-    <Style x:Key="{x:Static ToolBar.TextBoxStyleKey}"  BasedOn="{StaticResource {x:Type TextBox}}" TargetType="{x:Type TextBox}">
+    <Style x:Key="{x:Static ToolBar.TextBoxStyleKey}" BasedOn="{StaticResource {x:Type TextBox}}" TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}" />
     </Style>
-    <Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}"  TargetType="{x:Type ComboBox}">
+    <Style x:Key="{x:Static ToolBar.ComboBoxStyleKey}" TargetType="{x:Type ComboBox}">
         <Setter Property="Background" Value="{DynamicResource ControlNormalBrush}" />
         <Setter Property="BorderBrush" Value="{DynamicResource BorderNormalBrush}" />
         <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
