@@ -236,6 +236,7 @@ namespace sbwpf.Themer
             LoadTemplate("TabControl.xaml");
             LoadTemplate("TextBlock.xaml");
             LoadTemplate("TextBox.xaml");
+            LoadTemplate("Thumb.xaml");
             LoadTemplate("ToggleButton.xaml");
             LoadTemplate("ToolTip.xaml");
             LoadTemplate("TreeView.xaml");
