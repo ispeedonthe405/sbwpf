@@ -1,13 +1,5 @@
-﻿using System.Text;
+﻿using sbwpf.Core;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Demo
 {
@@ -19,6 +11,16 @@ namespace Demo
         public MainWindow()
         {
             InitializeComponent();
+            GenerateLogEvents();
+        }
+
+        private void GenerateLogEvents()
+        {
+            Logger.Debug("This is a debug log event");
+            Logger.Information("This is an info event");
+            Logger.Notify("This is a notify event");
+            Logger.Warning("This is your first and last warning. Just kidding.");
+            Logger.Error("The end of the demo is nigh!");
         }
     }
 }

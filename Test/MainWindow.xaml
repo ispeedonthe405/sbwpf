@@ -17,7 +17,9 @@
         <TabItem Header="DataGridEx">
             <local:uc_DataGridEx/>
         </TabItem>
-        <TabItem Header="Logger"></TabItem>
+        <TabItem Header="Logger">
+            <local:uc_LoggerView/>
+        </TabItem>
     </TabControl>
 
 </Window>

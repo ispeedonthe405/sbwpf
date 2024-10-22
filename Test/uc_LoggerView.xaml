@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="sbwpf.Test.uc_LoggerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:sbwpf.Demo"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Border Grid.Row="0" Background="{DynamicResource ControlNormalBrush}" BorderBrush="{DynamicResource BorderNormalBrush}"/>
+
+        <ListView x:Name="Display"
+                  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+                  ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  Height="Auto"
+                  ClipToBounds="True"
+                  Background="{DynamicResource ControlNormalBrush}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Path=Timestamp}" Width="Auto"/>
+                    <GridViewColumn Header="Category" Width="Auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Category}">
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding Path=BrushColor}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Message" Width="Auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Message}">
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding Path=BrushColor}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+
+</UserControl>
