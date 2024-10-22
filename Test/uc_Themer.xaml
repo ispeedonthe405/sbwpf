@@ -62,13 +62,13 @@
                 <GridView>
                     <GridViewColumn Header="Column 1" DisplayMemberBinding="{Binding Path=StringZero}"/>
                     <GridViewColumn Header="Column 2" DisplayMemberBinding="{Binding Path=StringOne}"/>
-                    <GridViewColumn Header="Column 2" DisplayMemberBinding="{Binding Path=GuidOne}"/>
+                    <GridViewColumn Header="Column 2" DisplayMemberBinding="{Binding Path=StringTwo}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <ListBox x:Name="listbox" Grid.Row="2" Grid.Column="1"
-                 ItemsSource="{Binding}" DisplayMemberPath="GuidOne">
+                 ItemsSource="{Binding}" DisplayMemberPath="StringZero">
         </ListBox>
         
     </Grid>
