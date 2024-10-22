@@ -15,6 +15,7 @@
             <RowDefinition Height="24"/>
             <RowDefinition Height="92"/>
             <RowDefinition Height="24"/>
+            <RowDefinition Height="48"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -72,15 +73,35 @@
                  ItemsSource="{Binding}" DisplayMemberPath="StringZero">
         </ListBox>
 
-        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <ComboBox x:Name="combobox" Width="150" ItemsSource="{Binding}"/>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="Controls in a Stack Panel" VerticalAlignment="Center"/>
+            <ComboBox x:Name="combobox" Width="150" ItemsSource="{Binding}" VerticalAlignment="Center"/>
+            <Border Background="Transparent" Width="10" VerticalAlignment="Center"/>
+            <Button x:Name="btn_Normal" Content="Normal" VerticalAlignment="Center"/>
             <Border Background="Transparent" Width="10"/>
-            <Button x:Name="btn_Normal" Content="Normal"/>
+            <Button x:Name="btn_Disabled" Content="Disabled" IsEnabled="False" VerticalAlignment="Center"/>
             <Border Background="Transparent" Width="10"/>
-            <Button x:Name="btn_Disabled" Content="Disabled" IsEnabled="False"/>
-            <Border Background="Transparent" Width="10"/>
-            <ToggleButton x:Name="togglebutton" Content="Toggle"/>
+            <ToggleButton x:Name="togglebutton" Content="Toggle" VerticalAlignment="Center"/>
         </StackPanel>
+
+        <ToolBarTray Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+
+            <ToolBar>
+                <TextBlock Text="Controls in toolbars"/>
+            </ToolBar>
+
+            <ToolBar VerticalAlignment="Center" VerticalContentAlignment="Center">
+                <Button Content="Normal"/>
+                <Button Content="Disabled" IsEnabled="False"/>
+                <ToggleButton Content="Toggle"/>
+            </ToolBar>
+
+            <ToolBar VerticalAlignment="Center" VerticalContentAlignment="Center">
+                <ComboBox Width="150" ItemsSource="{Binding}"/>
+                <TextBox Width="150"/>
+            </ToolBar>
+            
+        </ToolBarTray>
         
     </Grid>
     

@@ -20,6 +20,7 @@ namespace sbwpf.Test
             listview.DataContext = SampleDataset.Samples;
             listbox.DataContext = SampleDataset.Samples;
 
+            combobox.DisplayMemberPath = "StringZero";
             combobox.DataContext = SampleDataset.Samples;
         }
 
