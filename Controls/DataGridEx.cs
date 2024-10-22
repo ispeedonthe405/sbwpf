@@ -212,6 +212,7 @@ namespace sbwpf.Controls
                 var collection = JsonSerializer.Deserialize<List<JsonColumn>>(jsonString);
                 if (collection is not null)
                 {
+                    // Pass 1: Column order and size restored
                     foreach(var item in collection)
                     {
                         var col = Columns.Where(c => ((string)c.Header).Equals(item.header.ToString())).FirstOrDefault();
@@ -219,6 +220,16 @@ namespace sbwpf.Controls
                         col.Width = item.width;
                         col.DisplayIndex = item.displayIndex;
                         col.SortDirection = item.sortDirection;
+                    }
+
+                    // Pass 2: Column sorting restored
+                    foreach(var col in Columns)
+                    {
+                        if(col.SortDirection is not null)
+                        {
+                            Sort(col.DisplayIndex, col.SortDirection.Value);
+                            break;
+                        }
                     }
                 }
             }
