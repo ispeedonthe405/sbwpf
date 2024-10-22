@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="sbwpf.Test.uc_DataGridEx"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:sbwpf.Test"
+             xmlns:controls="clr-namespace:sbwpf.Controls;assembly=sbwpf.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <controls:DataGridEx x:Name="datagrid" Grid.Row="0"
+                             AutoGenerateColumns="True"
+                             CanUserResizeRows="False"
+                             CanUserDeleteRows="False"
+                             CanUserSortColumns="True"
+                             CanUserResizeColumns="True"
+                             ItemsSource="{Binding}">
+        </controls:DataGridEx>
+
+        <Border Grid.Row="1" Height="6" BorderThickness="2"
+                Background="{DynamicResource ControlNormalBrush}"
+                BorderBrush="{DynamicResource BorderNormalBrush}"/>
+
+        <TextBox Grid.Row="2"
+                 AcceptsReturn="True"
+                 ScrollViewer.CanContentScroll="True"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 Text="{Binding Mode=OneWay}">
+        </TextBox>
+        
+    </Grid>
+
+</UserControl>

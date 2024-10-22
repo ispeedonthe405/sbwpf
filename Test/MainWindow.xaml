@@ -14,8 +14,10 @@
         <TabItem Header="Themer">
             <local:uc_Themer/>
         </TabItem>
+        <TabItem Header="DataGridEx">
+            <local:uc_DataGridEx/>
+        </TabItem>
         <TabItem Header="Logger"></TabItem>
-        <TabItem Header="DataGridEx"></TabItem>
     </TabControl>
 
 </Window>
