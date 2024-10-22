@@ -35,7 +35,7 @@ namespace sbwpf.Core
                     break;
 
                 case LogEvent.EventCategory.Error:
-                    color = Colors.Crimson;
+                    color = Colors.OrangeRed;
                     break;
 
                 case LogEvent.EventCategory.Notify:
@@ -101,7 +101,7 @@ namespace sbwpf.Core
         {
 #if DEBUG
             NewEvent(LogEvent.EventCategory.Debug, message);
-            System.Diagnostics.Debug.Write($"Logger:\n{message}\n");
+            System.Diagnostics.Debug.Write($"Logger:{message}\n");
 #endif
         }
 
@@ -109,7 +109,7 @@ namespace sbwpf.Core
         {
 #if DEBUG
             NewEvent(LogEvent.EventCategory.Debug, ex.Message);
-            System.Diagnostics.Debug.Write($"Logger:\n{ex.Message}\n");
+            System.Diagnostics.Debug.Write($"Logger:{ex.Message}\n");
 #endif
         }
 
