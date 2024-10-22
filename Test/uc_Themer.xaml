@@ -13,7 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="24"/>
             <RowDefinition Height="24"/>
-            <RowDefinition Height="24"/>
+            <RowDefinition Height="92"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -21,11 +21,30 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="Auto">
+        <ToolBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Width="Auto">
             <Label VerticalAlignment="Center" Content="Active theme:"/>
             <Separator Width="20" Background="Transparent"/>
             <ComboBox x:Name="cb_Themes" Width="200" SelectionChanged="cb_Themes_SelectionChanged"/>
         </ToolBar>
+
+        <Menu Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New"/>
+                <MenuItem Header="_Open"/>
+                <MenuItem Header="_Save"/>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="Disabled" IsEnabled="False">
+            </MenuItem>
+            <MenuItem Header="Partially disabled">
+                <MenuItem Header="Item 1" IsEnabled="False"/>
+                <MenuItem Header="Item 2" IsEnabled="False"/>
+                <MenuItem Header="Item 3"/>
+                <MenuItem Header="Item 4"/>
+                <MenuItem Header="Item 5"/>
+                <MenuItem Header="Item 6" IsEnabled="False"/>
+            </MenuItem>
+        </Menu>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
             <Label VerticalAlignment="Center" Content="ThemeSymbol examples:"/>
@@ -36,6 +55,21 @@
             <themer:ThemeSymbol SymbolName="refresh"/>
             <themer:ThemeSymbol SymbolName="delete"/>
         </StackPanel>
+
+        <ListView x:Name="listview" Grid.Row="2" Grid.Column="0"
+                  ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Column 1" DisplayMemberBinding="{Binding Path=StringZero}"/>
+                    <GridViewColumn Header="Column 2" DisplayMemberBinding="{Binding Path=StringOne}"/>
+                    <GridViewColumn Header="Column 2" DisplayMemberBinding="{Binding Path=GuidOne}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListBox x:Name="listbox" Grid.Row="2" Grid.Column="1"
+                 ItemsSource="{Binding}" DisplayMemberPath="GuidOne">
+        </ListBox>
         
     </Grid>
     

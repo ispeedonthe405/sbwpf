@@ -16,6 +16,9 @@ namespace sbwpf.Test
             cb_Themes.DisplayMemberPath = "Name";
             cb_Themes.ItemsSource = ThemeManager.Themes;
             cb_Themes.SelectedItem = ThemeManager.ActiveTheme;
+
+            listview.DataContext = SampleDataset.Samples;
+            listbox.DataContext = SampleDataset.Samples;
         }
 
         private void cb_Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
