@@ -1,4 +1,5 @@
-﻿using sbwpf.Themer;
+﻿using sbwpf.Core;
+using sbwpf.Themer;
 using System.Windows;
 
 namespace Demo
@@ -14,7 +15,10 @@ namespace Demo
 
             // Initialize and integrate sbwpf.Themer
             ThemeManager.Integrate(this);
-            ThemeManager.ActiveTheme = ThemeManager.Themes.First();
+
+            // Choose a theme
+            int rnd = new Random().Next(0, ThemeManager.Themes.MaxIndex());
+            ThemeManager.ActiveTheme = ThemeManager.Themes[rnd];
         }
     }
 
