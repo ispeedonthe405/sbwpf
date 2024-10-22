@@ -19,6 +19,8 @@ namespace sbwpf.Test
 
             listview.DataContext = SampleDataset.Samples;
             listbox.DataContext = SampleDataset.Samples;
+
+            combobox.DataContext = SampleDataset.Samples;
         }
 
         private void cb_Themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
