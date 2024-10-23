@@ -22,6 +22,9 @@
                              CanUserDeleteRows="False"
                              CanUserSortColumns="True"
                              CanUserResizeColumns="True"
+                             IsReadOnly="True"
+                             GridLinesVisibility="None"
+                             SelectionMode="Single"
                              ItemsSource="{Binding}">
         </controls:DataGridEx>
 
