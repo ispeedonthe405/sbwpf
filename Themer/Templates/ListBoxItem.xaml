@@ -22,7 +22,7 @@
                 Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -51,8 +51,8 @@
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightInactiveBrush}"/>
-                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderInactiveBrush}"/>
-                            <Setter Property="Foreground" Value="{DynamicResource ForegroundSelectedOverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource ControlNormalBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundSelectedBrush}"/>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
@@ -60,7 +60,7 @@
                                 <Condition Property="IsSelected" Value="True"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" TargetName="Bd" Value="{DynamicResource HighlightSelectedBrush}"/>
-                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource BorderSelectedBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{DynamicResource ControlNormalBrush}"/>
                             <Setter Property="Foreground" Value="{DynamicResource ForegroundMouseOverBrush}"/>                            
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="False">

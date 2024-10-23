@@ -38,13 +38,13 @@
   "BorderLightColor": "#FFAEAEAE",
   "BorderMediumColor": "#FF9E9E9E",
   "BorderDarkColor": "#FF9E9E9E",
-  "HighlightNormalColor": "#880055AA",
-  "HighlightSelectedColor": "#880055AA",
-  "HighlightInactiveColor": "#770055AA",
-  "HighlightDisabledColor": "#880055AA",
-  "HighlightMouseOverColor": "#880055AA",
-  "HighlightPressedColor": "#880055AA",
-  "HighlightLightColor": "#880055AA",
-  "HighlightMediumColor": "#880055AA",
-  "HighlightDarkColor": "#880055AA"
+  "HighlightNormalColor": "#FF4D8CCC",
+  "HighlightSelectedColor": "#FF4D8CCC",
+  "HighlightInactiveColor": "#FF4D8CCC",
+  "HighlightDisabledColor": "#FF4D8CCC",
+  "HighlightMouseOverColor": "#FF4D8CCC",
+  "HighlightPressedColor": "#FF4D8CCC",
+  "HighlightLightColor": "#FF4D8CCC",
+  "HighlightMediumColor": "#FF4D8CCC",
+  "HighlightDarkColor": "#FF4D8CCC"
 }

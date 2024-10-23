@@ -232,53 +232,27 @@
     <Style TargetType="{x:Type DataGridRow}">
 
         <Style.Triggers>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource HighlightNormalBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
+            </Trigger>
+            
             <Trigger Property="IsSelected" Value="true">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource HighightNormalColor}" />
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource ForegroundSelectedColor}" />
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="Background" Value="{DynamicResource HighlightNormalBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
             </Trigger>
             <Trigger Property="IsEditing" Value="true">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource HighightNormalColor}" />
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource ForegroundSelectedColor}" />
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="Background" Value="{DynamicResource HighlightNormalBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
             </Trigger>
             <Trigger Property="IsFocused" Value="true">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource HighightNormalColor}" />
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource ForegroundSelectedColor}" />
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="Background" Value="{DynamicResource HighlightNormalBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
             </Trigger>
             <Trigger Property="IsFocused" Value="false">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource HighlightInactiveColor}" />
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource ForegroundInactiveColor}" />
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="Background" Value="{DynamicResource HighlightNormalBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ForegroundNormalBrush}"/>
             </Trigger>
         </Style.Triggers>
         
@@ -419,11 +393,11 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}"/>
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}"/>
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -432,11 +406,11 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}"/>
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor7}" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="{DynamicResource HighlightNormalColor}"/>
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
