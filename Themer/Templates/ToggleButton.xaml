@@ -57,7 +57,7 @@
                                 <Condition Property="IsChecked" Value="True"/>
                                 <Condition Property="IsMouseOver" Value="True"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlMouseOverBrush}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ControlPressedBrush}"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource BorderMouseOverBrush}"/>
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="false">
