@@ -15,7 +15,7 @@
             <RowDefinition Height="24"/>
             <RowDefinition Height="92"/>
             <RowDefinition Height="24"/>
-            <RowDefinition Height="48"/>
+            <RowDefinition Height="64"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -74,31 +74,35 @@
         </ListBox>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
-            <TextBlock Text="Controls in a Stack Panel" VerticalAlignment="Center"/>
-            <ComboBox x:Name="combobox" Width="150" ItemsSource="{Binding}" VerticalAlignment="Center"/>
-            <Border Background="Transparent" Width="10" VerticalAlignment="Center"/>
-            <Button x:Name="btn_Normal" Content="Normal" VerticalAlignment="Center"/>
-            <Border Background="Transparent" Width="10"/>
-            <Button x:Name="btn_Disabled" Content="Disabled" IsEnabled="False" VerticalAlignment="Center"/>
-            <Border Background="Transparent" Width="10"/>
-            <ToggleButton x:Name="togglebutton" Content="Toggle" VerticalAlignment="Center"/>
+            <TextBlock Text="Controls in a Stack Panel" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="combobox" Width="150" ItemsSource="{Binding}" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <Button x:Name="btn_Normal" Content="Normal" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <Button x:Name="btn_Disabled" Content="Disabled" IsEnabled="False" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <ToggleButton x:Name="togglebutton" Content="Toggle" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <RadioButton Content="Radio" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <CheckBox Content="Check" VerticalAlignment="Center" Margin="10,0,10,0"/>
         </StackPanel>
 
         <ToolBarTray Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
 
-            <ToolBar>
+            <ToolBar Band="0" BandIndex="0" VerticalAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock Text="Controls in toolbars"/>
             </ToolBar>
 
-            <ToolBar VerticalAlignment="Center" VerticalContentAlignment="Center">
+            <ToolBar Band="0" BandIndex="1" VerticalAlignment="Center" VerticalContentAlignment="Center">
                 <Button Content="Normal"/>
                 <Button Content="Disabled" IsEnabled="False"/>
                 <ToggleButton Content="Toggle"/>
             </ToolBar>
 
-            <ToolBar VerticalAlignment="Center" VerticalContentAlignment="Center">
+            <ToolBar Band="1" BandIndex="2" VerticalAlignment="Center" VerticalContentAlignment="Center">
                 <ComboBox Width="150" ItemsSource="{Binding}"/>
                 <TextBox Width="150"/>
+            </ToolBar>
+
+            <ToolBar Band="1" BandIndex="3" VerticalAlignment="Center" VerticalContentAlignment="Center">
+                <RadioButton Content="Radio" Margin="10,0,10,0"/>
+                <CheckBox Content="Check" Margin="10,0,10,0"/>
             </ToolBar>
             
         </ToolBarTray>
