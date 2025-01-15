@@ -23,7 +23,7 @@ namespace sbwpf.Demo
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
             return string.Empty;
         }
@@ -40,7 +40,7 @@ namespace sbwpf.Demo
                 string? processPath = Environment.ProcessPath;
                 if (processPath is null)
                 {
-                    Logger.Debug("Environment.ProcessPath = null");
+                    Logger.Warning("Environment.ProcessPath = null");
                     return;
                 }
                 DataPath = Path.Combine(
@@ -49,7 +49,7 @@ namespace sbwpf.Demo
             }
             catch (Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
         }
     }

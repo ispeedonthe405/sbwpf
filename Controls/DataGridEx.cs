@@ -44,7 +44,7 @@ namespace sbwpf.Controls
             {
                 if(incol.Header != header)
                 {
-                    Logger.Debug("Error: Column header does not match. Your indexing might be off.");
+                    Logger.Warning("Error: Column header does not match. Your indexing might be off.");
                     return;
                 }
                 incol.Width = width;
@@ -135,7 +135,7 @@ namespace sbwpf.Controls
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
 
             Items.Refresh();
@@ -169,7 +169,7 @@ namespace sbwpf.Controls
         {
             if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add && e.NewItems is not null)
             {
-                Logger.Debug("Columns_CollectionChanged");
+                Logger.Warning("Columns_CollectionChanged");
                 foreach (DataGridColumn column in e.NewItems)
                 {
                     AddColumnSizeChangedEvent(column);
@@ -199,7 +199,7 @@ namespace sbwpf.Controls
             }
             catch (Exception ex)
             {
-                Logger.Debug(ex.Message);
+                Logger.Warning(ex.Message);
             }
         }
 
@@ -235,7 +235,7 @@ namespace sbwpf.Controls
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex.Message);
+                Logger.Warning(ex.Message);
             }
         }
 

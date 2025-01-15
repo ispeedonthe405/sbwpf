@@ -101,7 +101,7 @@ namespace sbwpf.Themer
                 }
                 catch(Exception ex)
                 {
-                    Logger.Debug(ex);
+                    Logger.Warning(ex);
                 }
             }
         }
@@ -172,7 +172,7 @@ namespace sbwpf.Themer
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
         }
         
@@ -206,7 +206,7 @@ namespace sbwpf.Themer
                 }
                 else
                 {
-                    Logger.Debug($"Failed to extract resource stream: {resourceName}");
+                    Logger.Warning($"Failed to extract resource stream: {resourceName}");
                 }
             }
         }
@@ -273,7 +273,7 @@ namespace sbwpf.Themer
             //Theme? theme = Themes.Where(t => t.DisplayName.Equals("system", StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
             //if(theme is null) return;
 
-            Logger.Debug("Sampling system colors");
+            Logger.Notify("Sampling system colors");
 
             ActiveTheme.Resource["BackgroundNormalColor"] = SystemColors.WindowColor;
             ActiveTheme.Resource["ForegroundNormalColor"] = SystemColors.WindowTextColor;

@@ -16,7 +16,6 @@ namespace Demo
 
         private void GenerateLogEvents()
         {
-            Logger.Debug("This is a debug log event");
             Logger.Information("This is an info event");
             Logger.Notify("This is a notify event");
             Logger.Warning("This is your first and last warning. Just kidding.");

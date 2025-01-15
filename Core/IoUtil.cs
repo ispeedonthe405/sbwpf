@@ -93,7 +93,7 @@ namespace sbwpf.Core
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Error(ex);
             }
 
             return names;

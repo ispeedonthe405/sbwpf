@@ -636,7 +636,7 @@ namespace sbwpf.Themer
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
             return null;
         }
@@ -649,7 +649,7 @@ namespace sbwpf.Themer
             }
             catch(Exception ex)
             {
-                Logger.Debug(ex);
+                Logger.Warning(ex);
             }
             return string.Empty;
         }

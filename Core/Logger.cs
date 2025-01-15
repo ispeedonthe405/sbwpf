@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
@@ -24,6 +25,8 @@ namespace sbwpf.Core
         }
 
         public static ObservableCollection<LogEvent> Events = [];
+        public static bool UseConsole { get; set; } = false;
+        public static bool UseTrace { get; set; } = false;
 
         private static Color BrushColorFromCategory(LogEvent.EventCategory category)
         {
@@ -60,6 +63,25 @@ namespace sbwpf.Core
                 BrushColor = BrushColorFromCategory(category)
             };
             Events.Add(ev);
+
+            if (UseConsole)
+            {
+                LogToConsole(ev);
+            }
+            if (UseTrace)
+            {
+                LogToTrace(ev);
+            }
+        }
+
+        private static void LogToConsole(LogEvent logEvent)
+        {
+            Console.WriteLine($"Logger:{logEvent.Category}:{logEvent.Message}");
+        }
+
+        private static void LogToTrace(LogEvent logEvent)
+        {
+            Trace.WriteLine($"Logger:{logEvent.Category}:{logEvent.Message}");
         }
 
         public static void Information(string message)
@@ -95,22 +117,6 @@ namespace sbwpf.Core
         public static void Notify(string message)
         {
             NewEvent(LogEvent.EventCategory.Notify, message);
-        }
-
-        public static void Debug(string message)
-        {
-#if DEBUG
-            NewEvent(LogEvent.EventCategory.Debug, message);
-            System.Diagnostics.Debug.Write($"Logger:{message}\n");
-#endif
-        }
-
-        public static void Debug(Exception ex)
-        {
-#if DEBUG
-            NewEvent(LogEvent.EventCategory.Debug, ex.Message);
-            System.Diagnostics.Debug.Write($"Logger:{ex.Message}\n");
-#endif
         }
 
         public static void Exception(Exception ex)
