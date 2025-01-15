@@ -92,7 +92,7 @@ namespace sbwpf.Core
         /// <typeparam name="T"></typeparam>
         /// <param name="collectionDest"></param>
         /// <param name="collectionSrc"></param>
-        public static void AddUniqueRange<T>(this List<T> collectionDest, List<T> collectionSrc)
+        public static void AddUniqueRange<T>(this List<T> collectionDest, IEnumerable<T> collectionSrc)
         {
             foreach (var t in collectionSrc)
             {
@@ -163,7 +163,7 @@ namespace sbwpf.Core
         /// <typeparam name="T"></typeparam>
         /// <param name="collectionDest"></param>
         /// <param name="collectionSource"></param>
-        public static void AddRange<T>(this ObservableCollection<T> collectionDest, ObservableCollection<T> collectionSource)
+        public static void AddRange<T>(this ObservableCollection<T> collectionDest, IEnumerable<T> collectionSource)
         {
             foreach (var t in collectionSource)
             {
@@ -177,7 +177,7 @@ namespace sbwpf.Core
         /// <typeparam name="T"></typeparam>
         /// <param name="collectionDest"></param>
         /// <param name="collectionSource"></param>
-        public static void AddRangeUnique<T>(this ObservableCollection<T> collectionDest, ObservableCollection<T> collectionSource)
+        public static void AddRangeUnique<T>(this ObservableCollection<T> collectionDest, IEnumerable<T> collectionSource)
         {
             foreach (var t in collectionSource)
             {
@@ -193,15 +193,16 @@ namespace sbwpf.Core
         ///////////////////////////////////////////////////////////
         #region String
 
-        public static bool IsNull(this string value)
+        public static bool IsNull(this string? value)
         {
+            if (value is null) return true;
             if (String.IsNullOrEmpty(value)) return true;
             if (String.IsNullOrWhiteSpace(value)) return true;
             if (value.Length == 0) return true;
             return false;
         }
 
-        public static bool IsNotNull(this string value)
+        public static bool IsNotNull(this string? value)
         {
             if (String.IsNullOrEmpty(value)) return false;
             if (String.IsNullOrWhiteSpace(value)) return false;
