@@ -3,7 +3,6 @@
 ## A WPF application kit consisting of things I have found useful over time. The four assemblies are as follows:
 
 ### Core:
-Contains multiple sub-packages, including: 
 - A lightweight event logger
 - Extension methods for various types
 - Collections of helper functions for IO, JSON, and other foci
