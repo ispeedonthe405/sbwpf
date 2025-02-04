@@ -34,6 +34,31 @@ namespace sbwpf.Themer
             }
         }
 
+        public static void LoadSymbol(string symbolName)
+        {
+            string prefix = "sbwpf.Themer.Symbols.";
+            string suffix = ".png";
+            string resourceName = $"{prefix}{symbolName}{suffix}";
+
+            using(var assemblyResource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            {
+                if (assemblyResource is not null)
+                {
+                    BitmapImage bmi = new();
+                    bmi.BeginInit();
+                    bmi.StreamSource = assemblyResource;
+                    bmi.CacheOption = BitmapCacheOption.OnLoad;
+                    bmi.EndInit();
+                    BitmapSource src = RecolorImage(bmi, ThemeManager.ActiveTheme.SymbolColor);
+                    if(ThemeSymbols.Keys.Contains(symbolName))
+                    {
+                        ThemeSymbols.Remove(symbolName);
+                    }
+                    ThemeSymbols.Add(symbolName, src);
+                }
+            }
+        }
+
         private static BitmapSource RecolorImage(BitmapSource source, Color targetColor)
         {
             FormatConvertedBitmap newFormat = new();
@@ -84,7 +109,7 @@ namespace sbwpf.Themer
 
         public static void Initialize()
         {
-            BuildSymbols();
+            //BuildSymbols();
             ThemeManager.ThemeChanged += ThemeManager_ThemeChanged;
         }
 

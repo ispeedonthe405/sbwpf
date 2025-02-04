@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (&#xA;    copy &quot;$(TargetDir)\*.dll&quot; &quot;E:\code\libs\&quot;&#xA;)&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (&#xA;    echo &quot;DEBUG: Not copying lib&quot;&#xA;)" />
+    <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (&#xA;    copy &quot;$(TargetDir)\*.dll&quot; &quot;D:\code\libs\&quot;&#xA;)&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (&#xA;    echo &quot;DEBUG: Not copying lib&quot;&#xA;)" />
   </Target>
 
   <ItemGroup>

@@ -50,6 +50,7 @@ namespace sbwpf.Themer
         {
             if (d is ThemeSymbol dynamicImage)
             {
+                ThemeSymbolManager.LoadSymbol(dynamicImage.SymbolName);
                 dynamicImage.ApplySourceToSymbol();
             }
         }
@@ -99,6 +100,7 @@ namespace sbwpf.Themer
 
         public ThemeSymbol() : base()
         {
+            ThemeSymbolManager.LoadSymbol(SymbolName);
             ThemeManager.ThemeChanged += (sender, e) => ApplySourceToSymbol();
             ApplySourceToSymbol();
         }
