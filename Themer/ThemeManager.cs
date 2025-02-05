@@ -213,8 +213,6 @@ namespace sbwpf.Themer
 
         private static void Initialize()
         {
-            ThemeSymbolManager.Initialize();
-
             LoadDefaultThemes();
 
             LoadTemplate("Border.xaml");

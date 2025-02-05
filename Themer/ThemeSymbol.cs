@@ -4,6 +4,9 @@ using System.Windows.Controls;
 using System.Diagnostics;
 using System.Windows;
 using sbwpf.Core;
+using System.Reflection;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace sbwpf.Themer
 {
@@ -50,8 +53,7 @@ namespace sbwpf.Themer
         {
             if (d is ThemeSymbol dynamicImage)
             {
-                ThemeSymbolManager.LoadSymbol(dynamicImage.SymbolName);
-                dynamicImage.ApplySourceToSymbol();
+                dynamicImage.LoadSymbol(dynamicImage.SymbolName);
             }
         }
 
@@ -61,7 +63,7 @@ namespace sbwpf.Themer
             set 
             { 
                 SetValue(SymbolNameProperty, value);
-                ApplySourceToSymbol();
+                LoadSymbol(SymbolName);
             }
         }
 
@@ -71,25 +73,26 @@ namespace sbwpf.Themer
             return true;
         }
 
-        private void ApplySourceToSymbol()
+        private void LoadSymbol(string symbolName)
         {
             try
             {
-                var symbol = ThemeSymbolManager.ThemeSymbols[SymbolName];
-                if (symbol is not null)
+                string prefix = "sbwpf.Themer.Symbols.";
+                string suffix = ".png";
+                string resourceName = $"{prefix}{symbolName}{suffix}";
+
+                using (var assemblyResource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
                 {
-                    try
+                    if (assemblyResource is not null)
                     {
-                        Source = symbol;
+                        BitmapImage bmi = new();
+                        bmi.BeginInit();
+                        bmi.StreamSource = assemblyResource;
+                        bmi.CacheOption = BitmapCacheOption.OnLoad;
+                        bmi.EndInit();
+                        BitmapSource src = RecolorImage(bmi, ThemeManager.ActiveTheme.SymbolColor);
+                        Source = src;
                     }
-                    catch (System.Exception ex)
-                    {
-                        Debug.WriteLine($"ApplySourceToSymbol: {ex.Message}");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine($"ApplySourceToSymbol: Symbol {SymbolName} not found");
                 }
             }
             catch(Exception ex)
@@ -98,11 +101,45 @@ namespace sbwpf.Themer
             }
         }
 
+        private BitmapSource RecolorImage(BitmapSource source, Color targetColor)
+        {
+            FormatConvertedBitmap newFormat = new();
+            newFormat.BeginInit();
+            newFormat.Source = source;
+            newFormat.DestinationFormat = PixelFormats.Pbgra32;
+            newFormat.EndInit();
+
+            var pixels = new byte[newFormat.PixelWidth * newFormat.PixelHeight * 4];
+            newFormat.CopyPixels(pixels, newFormat.PixelWidth * 4, 0);
+
+            for (int i = 0; i < pixels.Length; i += 4)
+            {
+                // Skip the transparent pixels
+                if (pixels[i + 3] == 0)
+                {
+                    continue;
+                }
+
+                // Color pixels are overwritten with the new color, preserving alpha value
+                pixels[i] = targetColor.B;
+                pixels[i + 1] = targetColor.G;
+                pixels[i + 2] = targetColor.R;
+                pixels[i + 3] = pixels[i + 3];
+            }
+
+            var newBitmap = BitmapSource.Create(
+                newFormat.PixelWidth, newFormat.PixelHeight,
+                newFormat.DpiX, newFormat.DpiY,
+                newFormat.Format, newFormat.Palette,
+                pixels, newFormat.PixelWidth * 4);
+
+            return newBitmap;
+        }
+
         public ThemeSymbol() : base()
         {
-            ThemeSymbolManager.LoadSymbol(SymbolName);
-            ThemeManager.ThemeChanged += (sender, e) => ApplySourceToSymbol();
-            ApplySourceToSymbol();
+            LoadSymbol(SymbolName);
+            ThemeManager.ThemeChanged += (sender, e) => LoadSymbol(SymbolName);
         }
     }
 }
