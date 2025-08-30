@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sbwpf.themes", "sbwpf.themes\sbwpf.themes.csproj", "{C83F0CFC-4D23-4A9B-8D12-E342907EA65D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sbwpf.DemoTest", "sbwpf.DemoTest\sbwpf.DemoTest.csproj", "{8E123DA5-2004-4F83-BC4E-EE95778CA24B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C83F0CFC-4D23-4A9B-8D12-E342907EA65D} = {C83F0CFC-4D23-4A9B-8D12-E342907EA65D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C83F0CFC-4D23-4A9B-8D12-E342907EA65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C83F0CFC-4D23-4A9B-8D12-E342907EA65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C83F0CFC-4D23-4A9B-8D12-E342907EA65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C83F0CFC-4D23-4A9B-8D12-E342907EA65D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E123DA5-2004-4F83-BC4E-EE95778CA24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E123DA5-2004-4F83-BC4E-EE95778CA24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E123DA5-2004-4F83-BC4E-EE95778CA24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E123DA5-2004-4F83-BC4E-EE95778CA24B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59B680B9-CCB7-4A95-B5F2-01C163370CBC}
+	EndGlobalSection
+EndGlobal
